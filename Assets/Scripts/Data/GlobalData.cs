@@ -7,7 +7,7 @@ public class GlobalData
    
 	public enum Attributes
 	{
-		Publisher, Team, Money
+		Publisher, Community, Team, Money
 	}
 	
 
