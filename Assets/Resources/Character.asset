@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Character
   m_EditorClassIdentifier: 
   Name: Zeke
-  sprite: {fileID: 21300000, guid: 55920efab94d90246ab5d6b8abff98f0, type: 3}
+  Description: El producer
+  Sprite: {fileID: 21300000, guid: 55920efab94d90246ab5d6b8abff98f0, type: 3}

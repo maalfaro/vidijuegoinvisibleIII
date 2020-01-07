@@ -14,7 +14,7 @@ public class GameManager : Singleton<GameManager>
 
 	private void Start()
 	{
-		cards = Resources.LoadAll<CardData>("").ToList();
+		//cards = Resources.LoadAll<CardData>("").ToList();
 
 		InitializeCard?.Invoke(cards[0]);
 
@@ -36,5 +36,9 @@ public class GameManager : Singleton<GameManager>
 
 	}
 
+	public void SetNextCard()
+	{
+		InitializeCard?.Invoke(cards[1]);
+	}
 
 }
