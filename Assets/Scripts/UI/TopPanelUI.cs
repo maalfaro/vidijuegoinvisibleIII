@@ -16,6 +16,7 @@ public class TopPanelUI : MonoBehaviour
 	{
 		InitializeAmounts();
 		GEvent_OnAttributesChange.RegisterListener(OnAttributesChanged);
+
 		GameManager.ShowAttirbutesModifier += OnShowAttirbutesModifier;
 	}
 

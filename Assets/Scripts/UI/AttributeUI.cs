@@ -32,4 +32,8 @@ public class AttributeUI : MonoBehaviour
 	{
 		littleAmount.gameObject.SetActive(active);
 	}
+
+
+
+
 }

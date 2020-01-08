@@ -17,26 +17,35 @@ public class GameManager : Singleton<GameManager>
 		//cards = Resources.LoadAll<CardData>("").ToList();
 
 		InitializeCard?.Invoke(cards[0]);
-
+		InputManager.Instance.OnLeftChoiceConfirmed += OnLeftChoiceConfirmedHandler;
+		InputManager.Instance.OnRightChoiceConfirmed += OnRightChoiceConfirmedHandler;
 	}
 
-
-	public void SelecRightChoice()
-	{
-
+	private void nextTurn(bool isLeftChoice) {
+		//if (CardDeckManager.Instance.CurrentCard.UnlockedTransition != null) {
+		//	OnChangeStageHandler(CardDeckManager.Instance.CurrentCard.UnlockedTransition);
+		//}
+		//checkNewCharacters();
+		SetNextCard(isLeftChoice);
+		//LifeStageManager.Instance.CheckYear();
 	}
 
-	public void SelectLeftChoice()
-	{
-
+	private void OnLeftChoiceConfirmedHandler() {
+		//applyChoices(CardDeckManager.Instance.CurrentCard.LeftChoices);
+		nextTurn(isLeftChoice: true);
 	}
 
-	public void SelectCard()
-	{
-
+	private void OnRightChoiceConfirmedHandler() {
+		//applyChoices(CardDeckManager.Instance.CurrentCard.RightChoices);
+		nextTurn(isLeftChoice: false);
 	}
 
-	public void SetNextCard()
+	private void SetNextCard(bool isLeftChoice) {
+		//CardDeckManager.Instance.SetNextCard(isLeftChoice);
+		GameplayPanel.Instance.StartExitCardAnimation(cards[1]);
+	}
+
+	public void SetNextCard(CardData cardData)
 	{
 		InitializeCard?.Invoke(cards[1]);
 	}

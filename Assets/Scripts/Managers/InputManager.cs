@@ -10,8 +10,11 @@ using System;
 
     public event Action OnLeftChoiceConfirmed = delegate { };
     public event Action OnRightChoiceConfirmed = delegate { };
+	public event Action OnLeftChoiceSelected = delegate { };
+	public event Action OnRightChoiceSelected = delegate { };
+	public event Action DisableGameplayChoices = delegate { };
 
-    [SerializeField]
+	[SerializeField]
     private float angleModifier = 0.5f;
 
     [SerializeField]
@@ -54,13 +57,13 @@ using System;
 
     void Update() {
       if (CanMove && Input.GetMouseButton(0)) {
-        animateCard(true);
-        moveCard();
-        setChoiceInterface();
+        AnimateCard(true);
+        MoveCard();
+        SetChoiceInterface();
       }
       else if (CanMove && Input.GetMouseButtonUp(0)) {
-        animateCard(false);
-        getChosenOption();
+        AnimateCard(false);
+        GetChosenOption();
       }
     }
 
@@ -68,18 +71,18 @@ using System;
 
     #region Private methods
 
-    private void moveCard() {
+    private void MoveCard() {
 
       mousePosition = finalCardPosition = Input.mousePosition;
       mousePosition.z = currentCard.transform.position.z;
       mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
       mousePosition.z = currentCard.transform.position.z;
-      limitMousePosition();
+      LimitMousePosition();
 
       currentCard.transform.eulerAngles = new Vector3(0,0, -cardRectTransform.anchoredPosition.x * angleModifier);
     }
 
-    private void limitMousePosition() {
+    private void LimitMousePosition() {
       if (mousePosition.y > initialCardPosition.y) {
         mousePosition.y = initialCardPosition.y;
       } else if (mousePosition.y < initialCardPosition.y - maxBottom) {
@@ -101,7 +104,7 @@ using System;
 
     }
 
-    private void getChosenOption() {
+    private void GetChosenOption() {
       float finalPosition = cardRectTransform.anchoredPosition.x;
       if (finalPosition < -choiceOffset) {
         OnLeftChoiceConfirmed();
@@ -118,23 +121,23 @@ using System;
       currentCard.transform.position = initialCardPosition;
     }
 
-    private void setChoiceInterface() {
+    private void SetChoiceInterface() {
       float finalPosition = cardRectTransform.anchoredPosition.x;
 		if (finalPosition < -choiceOffset)
 		{
-			//UIManager.Instance.SetUILeft();
+			OnLeftChoiceSelected?.Invoke();
 		}
 		else if (finalPosition > choiceOffset)
 		{
-			//UIManager.Instance.SetUIRight();
+			OnRightChoiceSelected?.Invoke();
 		}
 		else
 		{
-			//UIManager.Instance.DisableGameplayChoices();
+			DisableGameplayChoices?.Invoke();
 		}
 	}
 
-    private void animateCard(bool hold) {
+    private void AnimateCard(bool hold) {
       if (holdCard != hold) {
         holdCard = hold;
         currentCard.AnimateCard(hold);

@@ -6,31 +6,6 @@ using Utils.UI;
 
 public class Card : MonoBehaviour
 {
-	[SerializeField] private Text questionText;
-
-	[Header("Character")]
-	[SerializeField] private Image characterImg;
-	[SerializeField] private Text characterName;
-	[SerializeField] private Text characterDescription;
-
-	private void Awake()
-	{
-		GameManager.InitializeCard += InitCurrentCard;
-	}
-
-	private void OnDisable()
-	{
-		GameManager.InitializeCard -= InitCurrentCard;
-	}
-
-	//public void Initialize(CardData cardData)
-	//{
-	//	questionText.text = cardData.Description;
-	//	characterImg.sprite = cardData.Character.Sprite;
-	//	characterName.text = cardData.Character.Name;
-	//	characterDescription.text = cardData.Character.Description;
-	//}
-
 
 	#region Members
 
@@ -75,8 +50,16 @@ public class Card : MonoBehaviour
 		secondFlipCardTweener[0].AddOnFinishedCallback(EnableInput);
 	}
 
+	private void Awake() {
+		GameManager.InitializeCard += InitCurrentCard;
+	}
+
+	private void OnDisable() {
+		GameManager.InitializeCard -= InitCurrentCard;
+	}
+
 	#endregion
-	
+
 	#region Public methods
 
 	public void SetShowCardCallback()
@@ -138,7 +121,7 @@ public class Card : MonoBehaviour
 		}
 		yield return new WaitForSeconds(nextCardTweeners[0].Duration);
 		setInitialPosition();
-		GameManager.Instance.SetNextCard(/*currentCardData*/);
+		GameManager.Instance.SetNextCard(currentCardData);
 	}
 
 	private void setInitialPosition()
