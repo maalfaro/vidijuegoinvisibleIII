@@ -36,7 +36,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
   /**********************************************************************************************/
   #region MonoBehaviour Methods
 
-  protected void Awake()
+  protected virtual void Awake()
   {
     if (instance == null)
     {

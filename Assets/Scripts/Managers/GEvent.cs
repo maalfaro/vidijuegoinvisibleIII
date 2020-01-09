@@ -48,9 +48,9 @@ public class DebugEvent : GEvent<DebugEvent>
 public class GEvent_OnAttributesChange : GEvent<GEvent_OnAttributesChange>
 {
 
-	public int publisher;
-	public int community;
-	public int team;
-	public int money;
+	public float publisher;
+	public float community;
+	public float team;
+	public float money;
 
 }

@@ -10,33 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495da070e77e67b45b1f172c10fbabc7, type: 3}
-  m_Name: Card 1
+  m_Name: Card 2
   m_EditorClassIdentifier: 
   Name: 
-  Description: Probando la segunda carta
+  Description: CARTA SEGUIDA
   Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
   LeftChoice:
-    Text: Carta 2 Left
+    Text: Left choice
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
       amount: 1
     - attribute: 2
-      amount: -2
+      amount: 2
     - attribute: 3
-      amount: 0
+      amount: 2
     nextCard: {fileID: 0}
   RightChoice:
-    Text: Carta 2 RIght
+    Text: Right Choice
     attributes:
     - attribute: 0
-      amount: 0
+      amount: 2
     - attribute: 1
       amount: 0
-    - attribute: 2
-      amount: 0
     - attribute: 3
+      amount: 1
+    - attribute: 2
       amount: 0
     nextCard: {fileID: 0}
   postChoiceText: 

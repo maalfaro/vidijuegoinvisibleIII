@@ -7,55 +7,90 @@ using System.Linq;
 
 public class TopPanelUI : MonoBehaviour
 {
-	[SerializeField] private AttributeUI[] attributesUI;
-	//[SerializeField] private AttributeUI community;
-	//[SerializeField] private AttributeUI team;
-	//[SerializeField] private AttributeUI money;
+	[SerializeField] private AttributeUI publisher;
+	[SerializeField] private AttributeUI community;
+	[SerializeField] private AttributeUI team;
+	[SerializeField] private AttributeUI money;
+
+	private CardData cardData;
+
+	private void Awake()
+	{
+		GEvent_OnAttributesChange.RegisterListener(OnAttributesChanged);
+		GameManager.InitializeCard += OnInitializeCard;
+	}
 
 	private void Start()
 	{
 		InitializeAmounts();
-		GEvent_OnAttributesChange.RegisterListener(OnAttributesChanged);
-
-		GameManager.ShowAttirbutesModifier += OnShowAttirbutesModifier;
+		DisableModifiers();
 	}
 
 	private void OnDestroy()
 	{
 		GEvent_OnAttributesChange.UnregisterListener(OnAttributesChanged);
+		GameManager.InitializeCard -= OnInitializeCard;
 	}
 
 	private void InitializeAmounts()
 	{
-		for (int i = 0; i < attributesUI.Length; i++)
-		{
-			attributesUI[i].Initialize();
-		}
+		publisher.Initialize();
+		community.Initialize();
+		team.Initialize();
+		money.Initialize();
+	}
+
+	private void OnInitializeCard(CardData cardData)
+	{
+		this.cardData = cardData;
 	}
 
 	private void OnAttributesChanged(GEvent_OnAttributesChange data)
 	{
-		//publisher.SetAmount(data.publisher);
-		//community.SetAmount(data.community);
-		//team.SetAmount(data.team);
-		//money.SetAmount(data.money);
-	}
-
-	private void OnShowAttirbutesModifier(GlobalData.AttributesEffect[] attributes)
-	{
-		for(int i = 0; i < attributes.Length; i++)
-		{
-			if (attributes[i].amount == 0) continue;
-
-		}
+		publisher.SetAmount(data.publisher);
+		community.SetAmount(data.community);
+		team.SetAmount(data.team);
+		money.SetAmount(data.money);
+		DisableModifiers();
 	}
 
 	private void ShowAttributeModifier(GlobalData.Attributes attribute, int amount)
 	{
 		if (amount == 0) return;
-		//AttributeUI att = attributesUI.FirstOrDefault(x=>x.attr)
+		switch (attribute)
+		{
+			case GlobalData.Attributes.Community: community.ShowModifier(amount); break;
+			case GlobalData.Attributes.Publisher: publisher.ShowModifier(amount); break;
+			case GlobalData.Attributes.Team: team.ShowModifier(amount); break;
+			case GlobalData.Attributes.Money: money.ShowModifier(amount); break;
+
+		}
 	}
 
+	public void SetLeftAttributes()
+	{
+		for(int i = 0; i < cardData.LeftChoice.attributes.Length; i++)
+		{
+			GlobalData.AttributesEffect at = cardData.LeftChoice.attributes[i];
+			ShowAttributeModifier(at.attribute, at.amount);
+		}
+	}
 
+	public void SetRightAttributes()
+	{
+		for (int i = 0; i < cardData.RightChoice.attributes.Length; i++)
+		{
+			GlobalData.AttributesEffect at = cardData.RightChoice.attributes[i];
+			ShowAttributeModifier(at.attribute, at.amount);
+		}
+	}
+
+	public void DisableModifiers()
+	{
+		publisher.ShowModifier(0);
+		community.ShowModifier(0);
+		team.ShowModifier(0);
+		money.ShowModifier(0);
+	}
 
 }

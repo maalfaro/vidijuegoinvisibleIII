@@ -40,9 +40,16 @@ public class GameplayPanel : Singleton<GameplayPanel> {
 
 	#region MonoBehaviour Methods
 
-	//void Awake() {
-	//	parent.SetActive(false);
-	//}
+	protected override void Awake()
+	{
+		base.Awake();
+		GameManager.InitializeCard += SetNextCard;
+	}
+
+	private void OnDisable()
+	{
+		GameManager.InitializeCard -= SetNextCard;
+	}
 
 	#endregion
 

@@ -8,5 +8,6 @@ public class Choice
 
 	public string Text;
 	public GlobalData.AttributesEffect[] attributes;
+	public CardData nextCard;
 
 }

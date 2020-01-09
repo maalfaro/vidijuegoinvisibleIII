@@ -15,8 +15,8 @@ public class UIManager : Singleton<UIManager> {
 	//[SerializeField]
 	//private MenuPanel menuPanel;
 
-	[SerializeField]
-	private GameplayPanel gameplayPanel;
+	[SerializeField] private GameplayPanel gameplayPanel;
+	[SerializeField] private TopPanelUI topPanelUI;
 
 	//[SerializeField]
 	//private PowersPanel powersPanel;
@@ -70,15 +70,18 @@ public class UIManager : Singleton<UIManager> {
 	//}
 
 	private void SetUILeft() {
+		topPanelUI.SetLeftAttributes();
 		gameplayPanel.SetUILeft();
 	}
 
 	private void SetUIRight() {
 		gameplayPanel.SetUIRight();
+		topPanelUI.SetRightAttributes();
 	}
 
 	private void DisableGameplayChoices() {
 		gameplayPanel.DisableChoices();
+		topPanelUI.DisableModifiers();
 	}
 
 	//public void ShowResult(ResultData resultData) {
