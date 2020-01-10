@@ -60,8 +60,8 @@ public class GameplayPanel : Singleton<GameplayPanel> {
 		DisableChoices();
 	}
 
-	public void StartExitCardAnimation(CardData card) {
-		currentCard.ExitCard(card);
+	public void StartExitCardAnimation(CardData card, bool isLeftChocie) {
+		currentCard.ExitCard(card, isLeftChocie);
 	}
 
 	public void SetNextCard(CardData card) {

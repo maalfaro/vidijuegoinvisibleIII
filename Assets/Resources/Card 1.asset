@@ -28,7 +28,7 @@ MonoBehaviour:
       amount: 0
     nextCard: {fileID: 0}
   RightChoice:
-    Text: Carta 2 RIght
+    Text: Carta 2  \nRight
     attributes:
     - attribute: 0
       amount: 0

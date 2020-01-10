@@ -26,7 +26,10 @@ public class Card : MonoBehaviour
 	private Tweener[] secondFlipCardTweener;
 
 	[SerializeField]
-	private Tweener[] nextCardTweeners;
+	private Tweener[] nextCardRightTweeners;
+
+	[SerializeField]
+	private Tweener[] nextCardLeftTweeners;
 
 	[SerializeField]
 	private Tweener holdCardTweener;
@@ -80,10 +83,10 @@ public class Card : MonoBehaviour
 		}
 	}
 
-	public void ExitCard(CardData cardData)
+	public void ExitCard(CardData cardData, bool isLeftChocie)
 	{
 		currentCardData = cardData;
-		StartCoroutine(WaitForFinishCharacter());
+		StartCoroutine(WaitForFinishCharacter(isLeftChocie));
 	}
 
 	public void AnimateCard(bool hold)
@@ -112,9 +115,10 @@ public class Card : MonoBehaviour
 		backgroundCharacterImage.enabled = true;
 	}
 
-	private IEnumerator WaitForFinishCharacter()
+	private IEnumerator WaitForFinishCharacter(bool isLeftChocie)
 	{
 		InputManager.Instance.CanMove = false;
+		Tweener[] nextCardTweeners = isLeftChocie ? nextCardLeftTweeners : nextCardRightTweeners;
 		for (int i = 0; i < nextCardTweeners.Length; i++)
 		{
 			nextCardTweeners[i].PlayTweener();

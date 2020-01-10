@@ -103,7 +103,7 @@ public class GameManager : Singleton<GameManager>
 	private void SetNextCard(bool isLeftChoice)
 	{
 		//CardDeckManager.Instance.SetNextCard(isLeftChoice);
-		GameplayPanel.Instance.StartExitCardAnimation(GetNextCard(isLeftChoice));
+		GameplayPanel.Instance.StartExitCardAnimation(GetNextCard(isLeftChoice), isLeftChoice);
 	}
 
 	private CardData GetNextCard(bool isLeftChoice)

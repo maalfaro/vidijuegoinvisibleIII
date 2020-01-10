@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Description: Probando la 3carta
-  Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
+  Character: {fileID: 11400000, guid: b62d1d40fd9d70b43a1f9b71a4b71aef, type: 2}
   LeftChoice:
     Text: Carta 2 Left
     attributes:
