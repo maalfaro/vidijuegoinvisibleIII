@@ -43,6 +43,10 @@ public class GameplayPanel : Singleton<GameplayPanel> {
 	protected override void Awake()
 	{
 		base.Awake();
+	}
+
+	private void OnEnable()
+	{
 		GameManager.InitializeCard += SetNextCard;
 	}
 
@@ -56,8 +60,17 @@ public class GameplayPanel : Singleton<GameplayPanel> {
 	#region Public methods
 
 	public void InitPanel() {
-		//parent.SetActive(true);
 		DisableChoices();
+	}
+
+	public void Show()
+	{
+		parent.SetActive(true);
+	}
+
+	public void Hide()
+	{
+		parent.SetActive(false);
 	}
 
 	public void StartExitCardAnimation(CardData card, bool isLeftChocie) {

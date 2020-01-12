@@ -15,3 +15,4 @@ MonoBehaviour:
   Name: Zeke
   Description: El producer
   Sprite: {fileID: 21300000, guid: 55920efab94d90246ab5d6b8abff98f0, type: 3}
+  background: {r: 0.13333334, g: 0.08627451, b: 0.058823533, a: 1}

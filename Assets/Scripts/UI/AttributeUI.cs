@@ -13,13 +13,18 @@ public class AttributeUI : MonoBehaviour
 	[SerializeField] private Image littleAmount;
 	private Color fillColor;
 
+	private void Awake()
+	{
+		fillColor = fillImage.color;
+	}
+
 	public void Initialize()
 	{
 		SetAmount(0.5f, false);
 		ActiveBigAmount(false);
 		ActiveLittleAmount(false);
 
-		fillColor = fillImage.color;
+		fillImage.color = fillColor;
 	}
 
 	public void SetAmount(float amount, bool animated = true)
@@ -35,7 +40,7 @@ public class AttributeUI : MonoBehaviour
 		}
 	}
 
-	public void ShowModifier(int amount)
+	public void ShowModifier(float amount)
 	{
 		if(amount==0)
 		{

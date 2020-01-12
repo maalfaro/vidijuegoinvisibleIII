@@ -14,16 +14,16 @@ public class TopPanelUI : MonoBehaviour
 
 	private CardData cardData;
 
+	public void InitPanel()
+	{
+		InitializeAmounts();
+		DisableModifiers();
+	}
+
 	private void Awake()
 	{
 		GEvent_OnAttributesChange.RegisterListener(OnAttributesChanged);
 		GameManager.InitializeCard += OnInitializeCard;
-	}
-
-	private void Start()
-	{
-		InitializeAmounts();
-		DisableModifiers();
 	}
 
 	private void OnDestroy()
@@ -54,7 +54,7 @@ public class TopPanelUI : MonoBehaviour
 		DisableModifiers();
 	}
 
-	private void ShowAttributeModifier(GlobalData.Attributes attribute, int amount)
+	private void ShowAttributeModifier(GlobalData.Attributes attribute, float amount)
 	{
 		if (amount == 0) return;
 		switch (attribute)

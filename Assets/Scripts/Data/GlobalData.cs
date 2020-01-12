@@ -15,7 +15,7 @@ public class GlobalData
 	public class AttributesEffect
 	{
 		public Attributes attribute;
-		public int amount;
+		public float amount;
 	}
 
 

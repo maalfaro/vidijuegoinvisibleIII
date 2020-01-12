@@ -43,17 +43,20 @@ using System;
       }
     }
 
-    #endregion
+	#endregion
 
-    #region MonoBehaviour Methods
+	#region MonoBehaviour Methods
 
-    void Start() {
-      halfScreenWidth = Screen.width / 2;
-      halfScreenHeight = Screen.height / 2;
+	void Start() {
+		halfScreenWidth = Screen.width / 2;
+		halfScreenHeight = Screen.height / 2;
 
-      initialCardPosition = currentCard.transform.position;
-      cardRectTransform = currentCard.GetComponent<RectTransform>();
-    }
+		initialCardPosition = currentCard.transform.position;
+		cardRectTransform = currentCard.GetComponent<RectTransform>();
+
+		GameManager.OnGameStart += OnGameStart;
+		GameManager.OnGameOver += OnGameOver;
+	}
 
     void Update() {
       if (CanMove && Input.GetMouseButton(0)) {
@@ -67,9 +70,20 @@ using System;
       }
     }
 
-    #endregion
+	#endregion
 
-    #region Private methods
+	#region Private methods
+
+	private void OnGameStart()
+	{
+		canMove = true;
+	}
+
+
+	private void OnGameOver()
+	{
+		canMove = false;
+	}
 
     private void MoveCard() {
 

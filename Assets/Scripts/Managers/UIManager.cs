@@ -5,69 +5,61 @@ using System;
 
 public class UIManager : Singleton<UIManager> {
 
-	//#region Members
-
-	//public Action OnGameStart = delegate { };
-
-	//[SerializeField]
-	//private TitlePanel titlePanel;
-
-	//[SerializeField]
-	//private MenuPanel menuPanel;
+	#region Variables
 
 	[SerializeField] private GameplayPanel gameplayPanel;
 	[SerializeField] private TopPanelUI topPanelUI;
+	[SerializeField] private ResultPanel resultPanel;
+	[SerializeField] private MenuPanel menuPanel;
 
-	//[SerializeField]
-	//private PowersPanel powersPanel;
+	#endregion
 
-	//[SerializeField]
-	//private ResultPanel resultPanel;
-
-	//[SerializeField]
-	//private SettingsPanel settingsPanel;
-
-	//[SerializeField]
-	//private UnlocksPanel unlocksPanel;
-
-	//#endregion
-
-
-	//#region MonoBehaviour Methods
+	#region MonoBehaviour Methods
 
 	void Start() {
-		//titlePanel.InitPanel();
-		gameplayPanel.InitPanel();
+		GameManager.OnGameStart += OnGameStart;
+		GameManager.OnGameOver += OnGameOver;
 
 		InputManager.Instance.OnLeftChoiceSelected += SetUILeft;
 		InputManager.Instance.OnRightChoiceSelected += SetUIRight;
 		InputManager.Instance.DisableGameplayChoices += DisableGameplayChoices;
 	}
 
-	//void OnEnable() {
-	//	titlePanel.OnContinue += OnStartMenuHandler;
+	#endregion
 
-	//	menuPanel.OnStartGame += OnStartGameHandler;
-	//	menuPanel.OnSettings += OnSettingsHandler;
-	//	menuPanel.OnCharactersUnlock += OnCharactersUnlockHandler;
-	//	menuPanel.OnResultsUnlock += OnResultsUnlockHandler;
+	#region Public methods
 
-	//	settingsPanel.OnCloseSettings += OnCloseSettingsHandler;
+	public void ShowGameplayPanel()
+	{
+		resultPanel.Hide();
+		menuPanel.Hide();
+		gameplayPanel.Show();
+	}
 
-	//	unlocksPanel.OnCloseUnlocks += OnCloseUnlocksHandler;
+	public void ShowMenu()
+	{
+		gameplayPanel.Hide();
+		resultPanel.Hide();
+		menuPanel.Show();
+	}
 
-	//	resultPanel.OnBackToMenu += OnStartMenuHandler;
+	#endregion
 
-	//}
+	#region Private methods
 
+	private void OnGameStart()
+	{
+		gameplayPanel.InitPanel();
+		topPanelUI.InitPanel();
+		resultPanel.InitPanel();
+	}
 
-	//#endregion
-
-	//#region Public methods
-
-	//public void EnableTitlePanel() {
-	//	titlePanel.InitPanel();
-	//}
+	private void OnGameOver()
+	{
+		resultPanel.Show();
+		menuPanel.Hide();
+		gameplayPanel.Hide();
+	}
 
 	private void SetUILeft() {
 		topPanelUI.SetLeftAttributes();
@@ -84,57 +76,6 @@ public class UIManager : Singleton<UIManager> {
 		topPanelUI.DisableModifiers();
 	}
 
-	//public void ShowResult(ResultData resultData) {
-	//	gameplayPanel.ClosePanel();
-	//	resultPanel.InitPanel();
-	//	resultPanel.EnableResult(true, resultData.Description, resultData.ResultSprite);
-	//}
-
-
-	//#endregion
-
-	//#region Private methods
-
-	//private void OnStartGameHandler() {
-	//	OnGameStart();
-	//	menuPanel.ClosePanel();
-	//	gameplayPanel.InitPanel();
-	//	gameplayPanel.SetNextCard(CardDeckManager.Instance.CurrentCard);
-	//	powersPanel.InitPanel();
-	//	powersPanel.ChangeBalance(FourPowersManager.Instance.PowerValues);
-	//}
-
-	//private void OnSettingsHandler() {
-	//	menuPanel.EnableGameButton(false);
-	//	settingsPanel.InitPanel();
-	//}
-
-	//private void OnCharactersUnlockHandler() {
-	//	menuPanel.EnableGameButton(false);
-	//	unlocksPanel.InitCharactersPanel();
-	//}
-
-	//private void OnResultsUnlockHandler() {
-	//	menuPanel.EnableGameButton(false);
-	//	unlocksPanel.InitResultsPanel();
-	//}
-
-	//private void OnCloseSettingsHandler() {
-	//	settingsPanel.ClosePanel();
-	//	menuPanel.EnableGameButton(true);
-	//}
-
-	//private void OnCloseUnlocksHandler() {
-	//	unlocksPanel.ClosePanel();
-	//	menuPanel.EnableGameButton(true);
-	//}
-
-	//private void OnStartMenuHandler() {
-	//	titlePanel.ClosePanel();
-	//	menuPanel.InitPanel();
-	//	powersPanel.ClosePanel();
-	//}
-
-	//#endregion
+#endregion
 
 }

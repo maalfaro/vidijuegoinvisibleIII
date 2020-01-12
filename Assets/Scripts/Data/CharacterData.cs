@@ -9,5 +9,6 @@ public class CharacterData : ScriptableObject
 	public string Name;
 	public string Description;
 	public Sprite Sprite;
+	public Color background;
 
 }

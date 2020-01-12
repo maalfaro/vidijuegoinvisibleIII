@@ -6,58 +6,88 @@ using System;
 
 public class GameManager : Singleton<GameManager>
 {
-
+	public static Action OnGameStart;
 	public static Action<CardData> InitializeCard;
 	public static Action<GlobalData.AttributesEffect[]> ShowAttirbutesModifier;
+	public static Action<int> OnProjectsChange;
+	public static Action OnGameOver;
 
 	[SerializeField] private List<CardData> cards;
+	[SerializeField] private List<CardData> finalCards;
 	[SerializeField] private AttributesManager attributesManager;
+	[SerializeField] private CardData initialCard;
 
 	private CardData currentCard;
+	private int projectsCount;
+
+	public int ProjectsCount => projectsCount;
 
 	private void Start()
 	{
-		//cards = Resources.LoadAll<CardData>("").ToList();
+		cards = Resources.LoadAll<CardData>("Game").ToList();
+		finalCards = Resources.LoadAll<CardData>("Finals").ToList();
 
 		InputManager.Instance.OnLeftChoiceConfirmed += OnLeftChoiceConfirmedHandler;
 		InputManager.Instance.OnRightChoiceConfirmed += OnRightChoiceConfirmedHandler;
+	}
+
+	public void PlayGame()
+	{
+		OnGameStart?.Invoke();
 
 		attributesManager.Initialize();
+		SetNextCard(initialCard);
+		OnProjectsChange?.Invoke(projectsCount);
+	}
 
-		SetNextCard(GetRandomCard());
-		//InitializeCard?.Invoke(cards[0]);
+	public void ResetGame()
+	{
+		cards = Resources.LoadAll<CardData>("Game").ToList();
+		projectsCount = 0;
+		PlayGame();
 	}
 
 	private void nextTurn(bool isLeftChoice) {
-		//if (CardDeckManager.Instance.CurrentCard.UnlockedTransition != null) {
-		//	OnChangeStageHandler(CardDeckManager.Instance.CurrentCard.UnlockedTransition);
-		//}
-		//checkNewCharacters();
 
+		if (finalCards.Contains(currentCard))
+		{
+			OnGameOver();
+			return;
+		}
+
+		CheckProjectsCount(isLeftChoice);
 		if (CheckGameFinished())
 		{
-
+			SetNextCard(finalCards[UnityEngine.Random.Range(0,2)]);
 		}
 		else
 		{
 			SetNextCard(isLeftChoice);
 		}
+	}
 
-		//LifeStageManager.Instance.CheckYear();
+	private void CheckProjectsCount(bool isLeftChoice)
+	{
+		if(isLeftChoice && currentCard.LeftChoice.nextCard == null)
+		{
+			projectsCount++;
+			OnProjectsChange?.Invoke(projectsCount);
+		}else if(!isLeftChoice && currentCard.RightChoice.nextCard == null)
+		{
+			projectsCount++;
+			OnProjectsChange?.Invoke(projectsCount);
+		}
 	}
 
 	private void OnLeftChoiceConfirmedHandler() {
 		ApplyChoices(currentCard.LeftChoice.attributes);
 		nextTurn(isLeftChoice: true);
-
 	}
 
 	private void OnRightChoiceConfirmedHandler() {
 		ApplyChoices(currentCard.RightChoice.attributes);
 		nextTurn(isLeftChoice: false);
 	}
-
-
 
 	private void ApplyChoices(GlobalData.AttributesEffect[] attributesEffect)
 	{
@@ -85,11 +115,11 @@ public class GameManager : Singleton<GameManager>
 		{
 			if(attributesManager.AttributeValues[i]<=0 || attributesManager.AttributeValues[i] >= 10)
 			{
-				//TODO GAME OVER
-				Debug.LogError("GAME OVER");
 				return true;
 			}
 		}
+
+		if (cards.Count == 0) return true;
 		return false;
 	}
 

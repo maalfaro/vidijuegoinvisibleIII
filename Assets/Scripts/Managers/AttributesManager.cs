@@ -5,16 +5,15 @@ using UnityEngine;
 public class AttributesManager : MonoBehaviour
 {
 
-	public int[] AttributeValues
+	public float[] AttributeValues
 	{
 		get;
 		private set;
 	}
 
-
 	public void Initialize()
 	{
-		AttributeValues = new int[System.Enum.GetValues(typeof(GlobalData.Attributes)).Length];
+		AttributeValues = new float[System.Enum.GetValues(typeof(GlobalData.Attributes)).Length];
 		for (int i = 0; i < AttributeValues.Length; i++)
 		{
 			AttributeValues[i] = 5;

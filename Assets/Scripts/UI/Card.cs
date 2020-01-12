@@ -12,6 +12,8 @@ public class Card : MonoBehaviour
 	[SerializeField]
 	private Image characterImage;
 
+	[SerializeField] private Image characterBG;
+
 	[SerializeField]
 	private GameObject backCard;
 
@@ -42,18 +44,24 @@ public class Card : MonoBehaviour
 	private Quaternion initialRotation;
 
 	#endregion
-	
+
 	#region MonoBehaviour Methods
 
-	private void Start()
+	private void Awake()
+	{
+		GameManager.OnGameStart += Initialize;
+	}
+
+	private void Initialize()
 	{
 		initialPosition = transform.position;
 		initialRotation = transform.rotation;
 		firstFlipCardTweener[0].AddOnFinishedCallback(ChangeToCharacter);
 		secondFlipCardTweener[0].AddOnFinishedCallback(EnableInput);
+		holdCardTweener.transform.localScale = Vector3.one;
 	}
 
-	private void Awake() {
+	private void OnEnable() {
 		GameManager.InitializeCard += InitCurrentCard;
 	}
 
@@ -65,16 +73,12 @@ public class Card : MonoBehaviour
 
 	#region Public methods
 
-	public void SetShowCardCallback()
-	{
-
-	}
-
 	public void InitCurrentCard(CardData cardData)
 	{
 		backgroundCharacterImage.enabled = false;
 		currentCardData = cardData;
 		characterImage.sprite = currentCardData.Character.Sprite;
+		characterBG.color = currentCardData.Character.background;
 		backCard.SetActive(true);
 
 		for (int i = 0; i < firstFlipCardTweener.Length; i++)
