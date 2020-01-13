@@ -9,35 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 495da070e77e67b45b1f172c10fbabc7, type: 3}
-  m_Name: InitialCard2
+  m_Script: {fileID: 11500000, guid: fff399c31a047784596a5c591b47f3e8, type: 3}
+  m_Name: FinalCardCommunity
   m_EditorClassIdentifier: 
-  Name: Init2
-  Description: FINAL 1
+  Name: FinalCommunity
+  Description: FINAL COMMUNITY
   Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
   LeftChoice:
-    Text: Zeke
-    attributes:
-    - attribute: 0
-      amount: 0
-    - attribute: 1
-      amount: 0
-    - attribute: 2
-      amount: 0
-    - attribute: 3
-      amount: 0
+    Text: 
+    attributes: []
     nextCard: {fileID: 0}
   RightChoice:
-    Text: Zeke
-    attributes:
-    - attribute: 0
-      amount: 0
-    - attribute: 1
-      amount: 0
-    - attribute: 3
-      amount: 0
-    - attribute: 2
-      amount: 0
+    Text: 
+    attributes: []
     nextCard: {fileID: 0}
   postChoiceText: 
   weight: 1
+  attribute: 1

@@ -20,7 +20,6 @@ public class AttributesManager : MonoBehaviour
 		}
 	}
 
-
 	public void ChangeAttributeValue(GlobalData.AttributesEffect attributeEffect)
 	{
 		AttributeValues[(int)attributeEffect.attribute] += attributeEffect.amount;
@@ -31,4 +30,12 @@ public class AttributesManager : MonoBehaviour
 		return AttributeValues[(int)attribute]/10f;
 	}
 
+	public GlobalData.Attributes GetAttributeFinal() {
+		for (int i = 0; i < AttributeValues.Length; i++) {
+			if (AttributeValues[i] <= 0 || AttributeValues[i] >= 10) {
+				return (GlobalData.Attributes)i;
+			}
+		}
+		return (GlobalData.Attributes) Random.Range(0,4);
+	}
 }

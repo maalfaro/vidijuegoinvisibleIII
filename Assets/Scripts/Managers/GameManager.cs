@@ -13,7 +13,7 @@ public class GameManager : Singleton<GameManager>
 	public static Action OnGameOver;
 
 	[SerializeField] private List<CardData> cards;
-	[SerializeField] private List<CardData> finalCards;
+	[SerializeField] private List<FinalCardData> finalCards;
 	[SerializeField] private AttributesManager attributesManager;
 	[SerializeField] private CardData initialCard;
 
@@ -25,7 +25,7 @@ public class GameManager : Singleton<GameManager>
 	private void Start()
 	{
 		cards = Resources.LoadAll<CardData>("Game").ToList();
-		finalCards = Resources.LoadAll<CardData>("Finals").ToList();
+		finalCards = Resources.LoadAll<FinalCardData>("Finals").ToList();
 
 		InputManager.Instance.OnLeftChoiceConfirmed += OnLeftChoiceConfirmedHandler;
 		InputManager.Instance.OnRightChoiceConfirmed += OnRightChoiceConfirmedHandler;
@@ -58,7 +58,7 @@ public class GameManager : Singleton<GameManager>
 		CheckProjectsCount(isLeftChoice);
 		if (CheckGameFinished())
 		{
-			SetNextCard(finalCards[UnityEngine.Random.Range(0,2)]);
+			SetNextCard(GetFinalCard());
 		}
 		else
 		{
@@ -68,6 +68,8 @@ public class GameManager : Singleton<GameManager>
 
 	private void CheckProjectsCount(bool isLeftChoice)
 	{
+		if (currentCard.Name.StartsWith("Init")) return;
+
 		if(isLeftChoice && currentCard.LeftChoice.nextCard == null)
 		{
 			projectsCount++;
@@ -121,6 +123,11 @@ public class GameManager : Singleton<GameManager>
 
 		if (cards.Count == 0) return true;
 		return false;
+	}
+
+	private CardData GetFinalCard() {
+		GlobalData.Attributes attr = attributesManager.GetAttributeFinal();
+		return finalCards.FirstOrDefault(x => x.attribute.Equals(attr));
 	}
 
 	#region Cards methods
