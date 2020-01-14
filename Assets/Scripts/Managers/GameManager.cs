@@ -12,10 +12,14 @@ public class GameManager : Singleton<GameManager>
 	public static Action<int> OnProjectsChange;
 	public static Action OnGameOver;
 
+	[Header("Cartas")]
 	[SerializeField] private List<CardData> cards;
 	[SerializeField] private List<CardData> finalCards;
-	[SerializeField] private AttributesManager attributesManager;
 	[SerializeField] private CardData initialCard;
+
+	[Header("Managers")]
+	[SerializeField] private AttributesManager attributesManager;
+	[SerializeField] private EventManager eventManager;
 
 	private CardData currentCard;
 	private int projectsCount;
@@ -81,15 +85,19 @@ public class GameManager : Singleton<GameManager>
 
 	private void OnLeftChoiceConfirmedHandler() {
 		ApplyChoices(currentCard.LeftChoice.attributes);
+		eventManager.ActiveEvent(currentCard.LeftChoice.eventData);
+		eventManager.ApplyActiveEvents();
 		nextTurn(isLeftChoice: true);
 	}
 
 	private void OnRightChoiceConfirmedHandler() {
 		ApplyChoices(currentCard.RightChoice.attributes);
+		eventManager.ActiveEvent(currentCard.RightChoice.eventData);
+		eventManager.ApplyActiveEvents();
 		nextTurn(isLeftChoice: false);
 	}
 
-	private void ApplyChoices(GlobalData.AttributesEffect[] attributesEffect)
+	public void ApplyChoices(GlobalData.AttributesEffect[] attributesEffect)
 	{
 		for(int i=0;i< attributesEffect.Length; i++)
 		{
@@ -98,7 +106,7 @@ public class GameManager : Singleton<GameManager>
 		FireAttributesChanged(attributesEffect);
 	}
 
-	private void FireAttributesChanged(GlobalData.AttributesEffect[] attributes) {
+	public void FireAttributesChanged(GlobalData.AttributesEffect[] attributes) {
 
 		GEvent_OnAttributesChange ge = new GEvent_OnAttributesChange();
 		ge.Description = "GE: Los atributos han cambiado";
@@ -108,6 +116,8 @@ public class GameManager : Singleton<GameManager>
 		ge.money = attributesManager.GetAttributeAmount(GlobalData.Attributes.Money); 
 		ge.FireEvent();
 	}
+
+
 
 	private bool CheckGameFinished()
 	{

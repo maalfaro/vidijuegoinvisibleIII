@@ -18,9 +18,6 @@ public class CardData : ScriptableObject
 	[Space(15)]
 	public Choice RightChoice;
 
-	[Header("Card post choice")]
-	public string postChoiceText;
-
 	[Space(20)]
 	public int weight = 1;
 

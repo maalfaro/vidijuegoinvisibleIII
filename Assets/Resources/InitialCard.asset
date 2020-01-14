@@ -27,6 +27,7 @@ MonoBehaviour:
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}
+    eventData: {fileID: 11400000, guid: 5e647505d17be9e41b69632262dea292, type: 2}
   RightChoice:
     Text: Zeke
     attributes:
@@ -39,5 +40,5 @@ MonoBehaviour:
     - attribute: 2
       amount: 0
     nextCard: {fileID: 0}
-  postChoiceText: 
+    eventData: {fileID: 11400000, guid: 5e647505d17be9e41b69632262dea292, type: 2}
   weight: 1
