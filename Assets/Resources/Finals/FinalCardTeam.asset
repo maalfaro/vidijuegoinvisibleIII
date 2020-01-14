@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff399c31a047784596a5c591b47f3e8, type: 3}
+  m_Name: FinalCardTeam
+  m_EditorClassIdentifier: 
+  Name: FinalCommunity
+  Description: FINAL TEAM
+  Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
+  LeftChoice:
+    Text: 
+    attributes: []
+    nextCard: {fileID: 0}
+  RightChoice:
+    Text: 
+    attributes: []
+    nextCard: {fileID: 0}
+  postChoiceText: 
+  weight: 1
+  attribute: 2
