@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Description: CARTA SEGUIDA
-  Character: {fileID: 11400000, guid: b62d1d40fd9d70b43a1f9b71a4b71aef, type: 2}
+  Character: {fileID: 11400000, guid: c78f12b90a5c08b42a873528afd17794, type: 2}
   LeftChoice:
     Text: Left choice
     attributes:
@@ -27,6 +27,7 @@ MonoBehaviour:
     - attribute: 3
       amount: 2
     nextCard: {fileID: 0}
+    eventData: {fileID: 0}
   RightChoice:
     Text: Right Choice
     attributes:
@@ -39,5 +40,5 @@ MonoBehaviour:
     - attribute: 2
       amount: 0
     nextCard: {fileID: 0}
-  postChoiceText: 
+    eventData: {fileID: 0}
   weight: 1

@@ -12,10 +12,13 @@ public class GameManager : Singleton<GameManager>
 	public static Action<int> OnProjectsChange;
 	public static Action OnGameOver;
 
-	[SerializeField] private List<CardData> cards;
-	[SerializeField] private List<FinalCardData> finalCards;
-	[SerializeField] private AttributesManager attributesManager;
+	private List<CardData> cards;
+	private List<FinalCardData> finalCards;
 	[SerializeField] private CardData initialCard;
+
+	[Header("Managers")]
+	[SerializeField] private AttributesManager attributesManager;
+	[SerializeField] private EventManager eventManager;
 
 	private CardData currentCard;
 	private int projectsCount;
@@ -95,7 +98,7 @@ public class GameManager : Singleton<GameManager>
 		nextTurn(isLeftChoice: false);
 	}
 
-	private void ApplyChoices(GlobalData.AttributesEffect[] attributesEffect)
+	public void ApplyChoices(GlobalData.AttributesEffect[] attributesEffect)
 	{
 		for(int i=0;i< attributesEffect.Length; i++)
 		{

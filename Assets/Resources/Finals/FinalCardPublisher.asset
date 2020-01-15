@@ -14,15 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: FinalCommunity
   Description: FINAL PUBLISHER
-  Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
+  Character: {fileID: 11400000, guid: 973c55ecfa2889d46824a11777a3d01c, type: 2}
   LeftChoice:
     Text: 
     attributes: []
     nextCard: {fileID: 0}
+    eventData: {fileID: 0}
   RightChoice:
     Text: 
     attributes: []
     nextCard: {fileID: 0}
-  postChoiceText: 
+    eventData: {fileID: 0}
   weight: 1
   attribute: 0

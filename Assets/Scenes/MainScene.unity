@@ -3741,8 +3741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71f054b5693c734d809c455f991d692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cards: []
-  finalCards: []
   initialCard: {fileID: 11400000, guid: 3e5641453f135ca4d9dc593ae6cf12b2, type: 2}
   attributesManager: {fileID: 1704243735}
   eventManager: {fileID: 1704243736}

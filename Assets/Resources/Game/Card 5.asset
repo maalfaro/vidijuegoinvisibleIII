@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Description: 5
-  Character: {fileID: 11400000, guid: b62d1d40fd9d70b43a1f9b71a4b71aef, type: 2}
+  Character: {fileID: 11400000, guid: c8aebaab27f7d26418723a6781091dbe, type: 2}
   LeftChoice:
     Text: Carta 2 Left
     attributes:
@@ -27,6 +27,7 @@ MonoBehaviour:
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}
+    eventData: {fileID: 0}
   RightChoice:
     Text: Carta 2 RIght
     attributes:
@@ -39,5 +40,5 @@ MonoBehaviour:
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}
-  postChoiceText: 
+    eventData: {fileID: 0}
   weight: 6
