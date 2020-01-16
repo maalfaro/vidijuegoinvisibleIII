@@ -56,6 +56,7 @@ using System;
 
 		GameManager.OnGameStart += OnGameStart;
 		GameManager.OnGameOver += OnGameOver;
+		GameManager.OnGamePaused += OnGamePaused;
 	}
 
     void Update() {
@@ -79,6 +80,10 @@ using System;
 		canMove = true;
 	}
 
+	private void OnGamePaused(bool paused)
+	{
+		canMove = !paused;
+	}
 
 	private void OnGameOver()
 	{
@@ -122,8 +127,7 @@ using System;
       float finalPosition = cardRectTransform.anchoredPosition.x;
       if (finalPosition < -choiceOffset) {
         OnLeftChoiceConfirmed();
-      }
-      else if (finalPosition > choiceOffset) {
+      } else if (finalPosition > choiceOffset) {
         OnRightChoiceConfirmed();
       } else {
         resetCard();

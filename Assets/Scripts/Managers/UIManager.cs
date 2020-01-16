@@ -11,6 +11,9 @@ public class UIManager : Singleton<UIManager> {
 	[SerializeField] private TopPanelUI topPanelUI;
 	[SerializeField] private ResultPanel resultPanel;
 	[SerializeField] private MenuPanel menuPanel;
+	[SerializeField] private ExitPanel exitPanel;
+
+	private bool pausable;
 
 	#endregion
 
@@ -19,10 +22,12 @@ public class UIManager : Singleton<UIManager> {
 	void Start() {
 		GameManager.OnGameStart += OnGameStart;
 		GameManager.OnGameOver += OnGameOver;
+		GameManager.OnGamePaused += OnGamePaused;
 
 		InputManager.Instance.OnLeftChoiceSelected += SetUILeft;
 		InputManager.Instance.OnRightChoiceSelected += SetUIRight;
 		InputManager.Instance.DisableGameplayChoices += DisableGameplayChoices;
+		
 	}
 
 	#endregion
@@ -33,14 +38,27 @@ public class UIManager : Singleton<UIManager> {
 	{
 		resultPanel.Hide();
 		menuPanel.Hide();
+		exitPanel.Hide();
 		gameplayPanel.Show();
+		pausable = true;
 	}
 
 	public void ShowMenu()
 	{
+		pausable = false;
 		gameplayPanel.Hide();
 		resultPanel.Hide();
+		exitPanel.Hide();
 		menuPanel.Show();
+	}
+
+	public void ShowExitPanel()
+	{
+		pausable = false;
+		gameplayPanel.Hide();
+		resultPanel.Hide();
+		menuPanel.Hide();
+		exitPanel.Show();
 	}
 
 	#endregion
@@ -56,9 +74,21 @@ public class UIManager : Singleton<UIManager> {
 
 	private void OnGameOver()
 	{
+		pausable = false;
 		resultPanel.Show();
 		menuPanel.Hide();
 		gameplayPanel.Hide();
+		exitPanel.Hide();
+	}
+
+	private void OnGamePaused(bool paused)
+	{
+		if (paused)	{
+			ShowExitPanel();
+		}
+		else {
+			ShowGameplayPanel();
+		}
 	}
 
 	private void SetUILeft() {

@@ -32,7 +32,7 @@ MonoBehaviour:
     Text: Zeke
     attributes:
     - attribute: 0
-      amount: 0
+      amount: 11
     - attribute: 1
       amount: 0
     - attribute: 3

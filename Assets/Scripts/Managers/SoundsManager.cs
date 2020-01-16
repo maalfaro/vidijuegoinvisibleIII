@@ -69,13 +69,12 @@ public class SoundsManager : Singleton<SoundsManager>
 		InitializeMusic();
 	}
 
-
-	public void PlaySound(string name) {
+	public void PlaySound(string name, float volume=0.5f,float pitch=1) {
 		AudioSource sfx = GetSfxSource();
 		AudioClip clip = store.FirstOrDefault(x => x.name.Equals(name));
+		sfx.pitch = pitch;
+		sfx.volume = volume;
 		sfx.PlayOneShot(clip);
 	}
-
-
 
 }

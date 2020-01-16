@@ -75,6 +75,7 @@ public class Card : MonoBehaviour
 
 	public void InitCurrentCard(CardData cardData)
 	{
+		if (cardData == null) return;
 		backgroundCharacterImage.enabled = false;
 		currentCardData = cardData;
 		characterImage.sprite = currentCardData.Character.Sprite;

@@ -98,15 +98,6 @@ public class GameplayPanel : Singleton<GameplayPanel> {
 		choicesUI.DisableChoices();
 	}
 
-	//public void UpdatePowers(int[] powerValues) {
-	//	//powersUI.
-	//	//powersUI.ChangeBalance(powerValues);
-	//}
-
-	//public void ShowTransition(TransitionData transition) {
-	//	transitionUI.EnableTransition(transition.Description, transition.TransitionSprite, continueGame);
-	//}
-
 	public void ClosePanel() {
 		parent.SetActive(false);
 	}

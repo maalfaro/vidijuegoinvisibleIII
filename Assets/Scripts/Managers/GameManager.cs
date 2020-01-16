@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
 	public static Action<GlobalData.AttributesEffect[]> ShowAttirbutesModifier;
 	public static Action<int> OnProjectsChange;
 	public static Action OnGameOver;
+	public static Action<bool> OnGamePaused;
 
 	private List<CardData> cards;
 	private List<FinalCardData> finalCards;
@@ -19,11 +20,24 @@ public class GameManager : Singleton<GameManager>
 	[Header("Managers")]
 	[SerializeField] private AttributesManager attributesManager;
 	[SerializeField] private EventManager eventManager;
+	[SerializeField] private LeaderboardManager leaderboardManager;
 
 	private CardData currentCard;
 	private int projectsCount;
 
 	public int ProjectsCount => projectsCount;
+	public List<int> Scores => leaderboardManager.Scores;
+
+	private bool gamePaused = true;
+	public bool GamePaused
+	{
+		get { return gamePaused; }
+		set
+		{
+			gamePaused = value;
+			OnGamePaused?.Invoke(gamePaused);
+		}
+	}
 
 	private void Start()
 	{
@@ -34,6 +48,15 @@ public class GameManager : Singleton<GameManager>
 		InputManager.Instance.OnRightChoiceConfirmed += OnRightChoiceConfirmedHandler;
 	}
 
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Escape) && !GameManager.Instance.GamePaused)
+		{
+			GameManager.Instance.GamePaused = true;
+		}
+	}
+	
+
 	public void PlayGame()
 	{
 		OnGameStart?.Invoke();
@@ -41,6 +64,8 @@ public class GameManager : Singleton<GameManager>
 		attributesManager.Initialize();
 		SetNextCard(initialCard);
 		OnProjectsChange?.Invoke(projectsCount);
+
+		GameManager.Instance.GamePaused = false;
 	}
 
 	public void ResetGame()
@@ -54,14 +79,16 @@ public class GameManager : Singleton<GameManager>
 
 		if (finalCards.Contains(currentCard))
 		{
-			OnGameOver();
+			SetNextCard(isLeftChoice, null);
+			leaderboardManager.SetNewScores(projectsCount);
+			OnGameOver?.Invoke();
 			return;
 		}
 
 		CheckProjectsCount(isLeftChoice);
 		if (CheckGameFinished())
 		{
-			SetNextCard(GetFinalCard());
+			SetNextCard(isLeftChoice,GetFinalCard());
 		}
 		else
 		{
@@ -85,6 +112,7 @@ public class GameManager : Singleton<GameManager>
 	}
 
 	private void OnLeftChoiceConfirmedHandler() {
+		if (gamePaused) return;
 		ApplyChoices(currentCard.LeftChoice.attributes);
 		eventManager.ActiveEvent(currentCard.LeftChoice.eventData);
 		eventManager.ApplyActiveEvents();
@@ -92,6 +120,7 @@ public class GameManager : Singleton<GameManager>
 	}
 
 	private void OnRightChoiceConfirmedHandler() {
+		if (gamePaused) return;
 		ApplyChoices(currentCard.RightChoice.attributes);
 		eventManager.ActiveEvent(currentCard.RightChoice.eventData);
 		eventManager.ApplyActiveEvents();
@@ -150,6 +179,12 @@ public class GameManager : Singleton<GameManager>
 	{
 		//CardDeckManager.Instance.SetNextCard(isLeftChoice);
 		GameplayPanel.Instance.StartExitCardAnimation(GetNextCard(isLeftChoice), isLeftChoice);
+	}
+
+	private void SetNextCard(bool isLeftChoice, CardData nextCard)
+	{
+		//CardDeckManager.Instance.SetNextCard(isLeftChoice);
+		GameplayPanel.Instance.StartExitCardAnimation(nextCard, isLeftChoice);
 	}
 
 	private CardData GetNextCard(bool isLeftChoice)
