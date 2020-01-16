@@ -31,6 +31,9 @@ public class MenuPanel : MonoBehaviour, IPointerClickHandler
 	public void OnPointerClick(PointerEventData eventData)
 	{
 		if (!cickable) return;
+
+		SoundsManager.Instance.PlaySound("click");
+
 		clickText.gameObject.SetActive(false);
 		UIManager.Instance.ShowGameplayPanel();
 		GameManager.Instance.PlayGame();
@@ -38,7 +41,7 @@ public class MenuPanel : MonoBehaviour, IPointerClickHandler
 
 	IEnumerator ShowClickText()
 	{
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(9);
 		cickable = true;
 		clickText.gameObject.SetActive(true);
 	}

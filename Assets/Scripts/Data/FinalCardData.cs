@@ -6,6 +6,11 @@ using UnityEngine;
 public class FinalCardData : CardData {
 
 	public GlobalData.Attributes attribute;
+	public Threshold threshold;
 
+}
+
+public enum Threshold {
+	MIN,MAX
 }
 

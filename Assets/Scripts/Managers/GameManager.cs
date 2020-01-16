@@ -134,7 +134,9 @@ public class GameManager : Singleton<GameManager>
 
 	private CardData GetFinalCard() {
 		GlobalData.Attributes attr = attributesManager.GetAttributeFinal();
-		return finalCards.FirstOrDefault(x => x.attribute.Equals(attr));
+		float amount = attributesManager.GetAttributeAmount(attr);
+		Threshold threshold = amount <= 0 ? Threshold.MIN : Threshold.MAX;
+		return finalCards.FirstOrDefault(x => x.attribute.Equals(attr) && x.threshold.Equals(threshold));
 	}
 
 	#region Cards methods

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fff399c31a047784596a5c591b47f3e8, type: 3}
-  m_Name: FinalCardMoney
+  m_Name: FinalCardTeam 1
   m_EditorClassIdentifier: 
   Name: FinalCommunity
-  Description: FINAL MONEY 0
-  Character: {fileID: 11400000, guid: c8aebaab27f7d26418723a6781091dbe, type: 2}
+  Description: FINAL TEAM
+  Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
   LeftChoice:
     Text: 
     attributes: []
@@ -26,5 +26,5 @@ MonoBehaviour:
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   weight: 1
-  attribute: 3
-  threshold: 0
+  attribute: 2
+  threshold: 1

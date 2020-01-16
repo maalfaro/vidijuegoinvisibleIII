@@ -80,7 +80,7 @@ public class Card : MonoBehaviour
 		characterImage.sprite = currentCardData.Character.Sprite;
 		characterBG.color = currentCardData.Character.background;
 		backCard.SetActive(true);
-
+		SoundsManager.Instance.PlaySound("flipCard");
 		for (int i = 0; i < firstFlipCardTweener.Length; i++)
 		{
 			firstFlipCardTweener[i].PlayTweener();
@@ -122,6 +122,7 @@ public class Card : MonoBehaviour
 	private IEnumerator WaitForFinishCharacter(bool isLeftChocie)
 	{
 		InputManager.Instance.CanMove = false;
+		SoundsManager.Instance.PlaySound("woosh");
 		Tweener[] nextCardTweeners = isLeftChocie ? nextCardLeftTweeners : nextCardRightTweeners;
 		for (int i = 0; i < nextCardTweeners.Length; i++)
 		{
