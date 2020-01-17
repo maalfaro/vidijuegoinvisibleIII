@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Init1
   Description: "Asi que tu eres el nuevo productor. \xBFC\xFAal es tu nombre?"
-  Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
+  Character: {fileID: 11400000, guid: 1c36507c15becda4bbaa2bb5a18e5104, type: 2}
   LeftChoice:
     Text: Zeke
     attributes:

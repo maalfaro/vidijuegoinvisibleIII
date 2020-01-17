@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a7d4b27934740e40a2c5a1e06011c0d, type: 3}
-  m_Name: Character 4
+  m_Name: Tonimi
   m_EditorClassIdentifier: 
-  Name: Zeke??
-  Description: El producer??
-  Sprite: {fileID: 21300000, guid: 12fb11f0a2eba7c4d96de2683b42a4cf, type: 3}
+  Name: Tonimi
+  Description: 
+  Sprite: {fileID: 21300000, guid: 5544987321b63d34e90419f765a48942, type: 3}
   background: {r: 0.36908153, g: 0.5471698, b: 0.3711767, a: 1}

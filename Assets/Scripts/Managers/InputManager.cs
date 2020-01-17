@@ -87,7 +87,7 @@ using System;
 		canMove = !paused;
 	}
 
-	private void OnGameOver()
+	private void OnGameOver(bool playerWin)
 	{
 		canMove = false;
 	}

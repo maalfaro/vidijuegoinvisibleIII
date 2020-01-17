@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: Card 4
   m_EditorClassIdentifier: 
   Name: 
-  Description: 4
-  Character: {fileID: 11400000, guid: b32bbf3050db705469ff607d0b5815ce, type: 2}
+  Description: 
+  Character: {fileID: 11400000, guid: c8aebaab27f7d26418723a6781091dbe, type: 2}
   LeftChoice:
-    Text: Carta 2 Left
+    Text: 
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
-      amount: 1
+      amount: 0
     - attribute: 2
-      amount: -2
+      amount: 0
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: Carta 2 RIght
+    Text: 
     attributes:
     - attribute: 0
       amount: 0

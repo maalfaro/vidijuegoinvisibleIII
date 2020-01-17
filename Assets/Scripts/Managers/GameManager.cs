@@ -10,7 +10,7 @@ public class GameManager : Singleton<GameManager>
 	public static Action<CardData> InitializeCard;
 	public static Action<GlobalData.AttributesEffect[]> ShowAttirbutesModifier;
 	public static Action<int> OnProjectsChange;
-	public static Action OnGameOver;
+	public static Action<bool> OnGameOver;
 	public static Action<bool> OnGamePaused;
 
 	private List<CardData> cards;
@@ -74,15 +74,25 @@ public class GameManager : Singleton<GameManager>
 
 	private void nextTurn(bool isLeftChoice) {
 
+		
+
 		if (finalCards.Contains(currentCard))
 		{
 			SetNextCard(isLeftChoice, null);
 			leaderboardManager.SetNewScores(projectsCount);
-			OnGameOver?.Invoke();
+			OnGameOver?.Invoke(false);
 			return;
 		}
 
 		CheckProjectsCount(isLeftChoice);
+		if (cards.Count == 0)
+		{
+			SetNextCard(isLeftChoice, null);
+			leaderboardManager.SetNewScores(projectsCount);
+			OnGameOver?.Invoke(true);
+			return;
+		}
+
 		if (CheckGameFinished())
 		{
 			SetNextCard(isLeftChoice,GetFinalCard());
@@ -153,8 +163,6 @@ public class GameManager : Singleton<GameManager>
 				return true;
 			}
 		}
-
-		if (cards.Count == 0) return true;
 		return false;
 	}
 

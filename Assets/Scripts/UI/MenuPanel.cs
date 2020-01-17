@@ -41,7 +41,7 @@ public class MenuPanel : MonoBehaviour, IPointerClickHandler
 
 	IEnumerator ShowClickText()
 	{
-		yield return new WaitForSeconds(9);
+		yield return new WaitForSeconds(9.5f);
 		cickable = true;
 		clickText.gameObject.SetActive(true);
 	}

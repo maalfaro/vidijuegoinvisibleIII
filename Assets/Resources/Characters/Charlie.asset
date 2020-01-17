@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a7d4b27934740e40a2c5a1e06011c0d, type: 3}
-  m_Name: Character 3
+  m_Name: Charlie
   m_EditorClassIdentifier: 
-  Name: Zeke??
-  Description: El producer??
-  Sprite: {fileID: 21300000, guid: 3ce546dda4539ec45a3a71a65b2090ff, type: 3}
+  Name: Charlie
+  Description: 
+  Sprite: {fileID: 21300000, guid: e817e5b6ed9b709498888b7c8a11df2a, type: 3}
   background: {r: 0.36908153, g: 0.5471698, b: 0.3711767, a: 1}

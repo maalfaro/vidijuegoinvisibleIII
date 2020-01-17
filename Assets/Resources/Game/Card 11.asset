@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495da070e77e67b45b1f172c10fbabc7, type: 3}
+  m_Name: Card 11
+  m_EditorClassIdentifier: 
+  Name: 
+  Description: 
+  Character: {fileID: 11400000, guid: 61970580f23817c44b99a78a480f347c, type: 2}
+  LeftChoice:
+    Text: 
+    attributes:
+    - attribute: 0
+      amount: 0
+    - attribute: 1
+      amount: 0
+    - attribute: 2
+      amount: 0
+    - attribute: 3
+      amount: 0
+    nextCard: {fileID: 0}
+    eventData: {fileID: 0}
+  RightChoice:
+    Text: 
+    attributes:
+    - attribute: 0
+      amount: 0
+    - attribute: 1
+      amount: 0
+    - attribute: 2
+      amount: 0
+    - attribute: 3
+      amount: 0
+    nextCard: {fileID: 0}
+    eventData: {fileID: 0}
+  weight: 1

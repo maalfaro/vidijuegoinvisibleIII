@@ -116,8 +116,10 @@ public class GameplayPanel : Singleton<GameplayPanel> {
 	}
 
 	private void SetCharactedText(string name, string description) {
-		characterNameText.text = name;
-		characterDescriptionText.text = description;
+		characterNameText.text = string.IsNullOrEmpty(name)?string.Empty : name;
+		characterDescriptionText.text = string.IsNullOrEmpty(description) ? string.Empty : description;
+		characterNameText.gameObject.SetActive(!string.IsNullOrEmpty(name));
+		characterDescriptionText.gameObject.SetActive(!string.IsNullOrEmpty(description));
 	}
 
 	private void SetChoices(string left, string right) {

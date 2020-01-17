@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: "Recuerda que debes mantener el equilibrio entre los atributos para
     no ser despedido:\n - Publisher\t\t<sprite=0>\n - Comunidad\t<sprite=1>\n - Equipo\t\t<sprite=2>\n
     - Dinero\t\t<sprite=3>\n"
-  Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
+  Character: {fileID: 11400000, guid: 1c36507c15becda4bbaa2bb5a18e5104, type: 2}
   LeftChoice:
     Text: Entendido
     attributes:
@@ -42,5 +42,5 @@ MonoBehaviour:
     - attribute: 2
       amount: 0
     nextCard: {fileID: 0}
-    eventData: {fileID: 11400000, guid: 5e647505d17be9e41b69632262dea292, type: 2}
+    eventData: {fileID: 0}
   weight: 1

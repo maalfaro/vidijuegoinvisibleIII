@@ -72,10 +72,10 @@ public class UIManager : Singleton<UIManager> {
 		resultPanel.InitPanel();
 	}
 
-	private void OnGameOver()
+	private void OnGameOver(bool playerWin)
 	{
 		pausable = false;
-		resultPanel.Show();
+		resultPanel.Show(playerWin);
 		menuPanel.Hide();
 		gameplayPanel.Hide();
 		exitPanel.Hide();
