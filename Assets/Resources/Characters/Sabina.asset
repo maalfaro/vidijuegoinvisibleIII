@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: Sabina
   Description: La abogada
   Sprite: {fileID: 21300000, guid: 27aeaa8c07f9e594db5e0ac26d2ed135, type: 3}
-  background: {r: 0.36908153, g: 0.5471698, b: 0.3711767, a: 1}
+  background: {r: 0.97647065, g: 0.627451, b: 0.33333334, a: 1}

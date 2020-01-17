@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: Gitzo
   Description: El tripode
   Sprite: {fileID: 21300000, guid: f38b6f350ea0dce4c9f02855787a4d8a, type: 3}
-  background: {r: 0.36908153, g: 0.5471698, b: 0.3711767, a: 1}
+  background: {r: 0.21176472, g: 0.6627451, b: 0.8000001, a: 1}

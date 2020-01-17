@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: El desaparecido
   Description: 
   Sprite: {fileID: 21300000, guid: 51a08e8410f4dbc498f6c9a6ba01567b, type: 3}
-  background: {r: 0.36908153, g: 0.5471698, b: 0.3711767, a: 1}
+  background: {r: 0.8313726, g: 0.16862746, b: 0.14901961, a: 1}

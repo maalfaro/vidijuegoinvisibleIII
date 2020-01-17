@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: Random3
   Description: 
   Sprite: {fileID: 21300000, guid: e75aaee146fea3d42808b5d023580152, type: 3}
-  background: {r: 0.36908153, g: 0.5471698, b: 0.3711767, a: 1}
+  background: {r: 0.9921569, g: 0.28235295, b: 0.40000004, a: 1}
