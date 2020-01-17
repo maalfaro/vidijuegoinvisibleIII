@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameplayPanel : Singleton<GameplayPanel> {
 
@@ -18,7 +19,7 @@ public class GameplayPanel : Singleton<GameplayPanel> {
 	//[SerializeField]
 	//private QuestionUI questionUI;
 
-	[SerializeField] private Text questionText;
+	[SerializeField] private TextMeshProUGUI questionText;
 	[SerializeField] private Text characterNameText;
 	[SerializeField] private Text characterDescriptionText;
 

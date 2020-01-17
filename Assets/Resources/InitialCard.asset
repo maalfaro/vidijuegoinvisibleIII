@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Init1
   Description: "Asi que tu eres el nuevo productor. \xBFC\xFAal es tu nombre?"
-  Character: {fileID: 11400000, guid: c78f12b90a5c08b42a873528afd17794, type: 2}
+  Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
   LeftChoice:
     Text: Zeke
     attributes:
@@ -26,19 +26,19 @@ MonoBehaviour:
       amount: 0
     - attribute: 3
       amount: 0
-    nextCard: {fileID: 0}
-    eventData: {fileID: 11400000, guid: 5e647505d17be9e41b69632262dea292, type: 2}
+    nextCard: {fileID: 11400000, guid: fc8c244edb1e9ee44866605d99bfbc71, type: 2}
+    eventData: {fileID: 0}
   RightChoice:
     Text: Zeke
     attributes:
     - attribute: 0
-      amount: 11
+      amount: 0
     - attribute: 1
       amount: 0
     - attribute: 3
       amount: 0
     - attribute: 2
       amount: 0
-    nextCard: {fileID: 0}
-    eventData: {fileID: 11400000, guid: 5e647505d17be9e41b69632262dea292, type: 2}
+    nextCard: {fileID: 11400000, guid: fc8c244edb1e9ee44866605d99bfbc71, type: 2}
+    eventData: {fileID: 0}
   weight: 1

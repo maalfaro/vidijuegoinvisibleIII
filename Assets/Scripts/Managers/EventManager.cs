@@ -5,7 +5,7 @@ using System.Linq;
 
 public class EventManager : Singleton<EventManager>
 {
-	public static System.Action<List<EventData>> OnEventChanged;
+	public static System.Action<List<EventData>, bool> OnEventChanged;
 	private List<EventData> activeEvents;
 
 	private void Start()
@@ -24,7 +24,7 @@ public class EventManager : Singleton<EventManager>
 		{
 			activeEvents.Add((EventData)eventData.Clone());
 		}
-		OnEventChanged?.Invoke(activeEvents);
+		OnEventChanged?.Invoke(activeEvents,true);
 	}
 
 	public void ApplyActiveEvents()
@@ -40,7 +40,7 @@ public class EventManager : Singleton<EventManager>
 	private void RemoveEvents()
 	{
 		activeEvents.RemoveAll(x => x.Duration <= 0);
-		OnEventChanged?.Invoke(activeEvents);
+		OnEventChanged?.Invoke(activeEvents,false);
 	}
 
 }

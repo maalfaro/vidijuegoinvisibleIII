@@ -60,16 +60,18 @@ using System;
 	}
 
     void Update() {
-      if (CanMove && Input.GetMouseButton(0)) {
-        AnimateCard(true);
-        MoveCard();
-        SetChoiceInterface();
-      }
-      else if (CanMove && Input.GetMouseButtonUp(0)) {
-        AnimateCard(false);
-        GetChosenOption();
-      }
-    }
+		if (CanMove && Input.GetMouseButton(0)) {
+			AnimateCard(true);
+			MoveCard();
+			SetChoiceInterface();
+		}
+		else if (CanMove && Input.GetMouseButtonUp(0)) {
+			AnimateCard(false);
+			GetChosenOption();
+		}else if(Input.GetKeyDown(KeyCode.Escape) && !GameManager.Instance.GamePaused){
+			GameManager.Instance.GamePaused = true;
+		}
+	}
 
 	#endregion
 

@@ -9,6 +9,8 @@ public class EventData : ScriptableObject, ICloneable
 
 	[Range(0f, 1f)]
 	public float Probability;
+	public string Name;
+	[TextArea(5, 15)]
 	public string Description;
 	public int Duration;
 

@@ -39,6 +39,12 @@ public class GameManager : Singleton<GameManager>
 		}
 	}
 
+	protected override void Awake()
+	{
+		base.Awake();
+		Application.targetFrameRate = 60;
+	}
+
 	private void Start()
 	{
 		cards = Resources.LoadAll<CardData>("Game").ToList();
@@ -47,15 +53,6 @@ public class GameManager : Singleton<GameManager>
 		InputManager.Instance.OnLeftChoiceConfirmed += OnLeftChoiceConfirmedHandler;
 		InputManager.Instance.OnRightChoiceConfirmed += OnRightChoiceConfirmedHandler;
 	}
-
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.Escape) && !GameManager.Instance.GamePaused)
-		{
-			GameManager.Instance.GamePaused = true;
-		}
-	}
-	
 
 	public void PlayGame()
 	{
@@ -114,16 +111,16 @@ public class GameManager : Singleton<GameManager>
 	private void OnLeftChoiceConfirmedHandler() {
 		if (gamePaused) return;
 		ApplyChoices(currentCard.LeftChoice.attributes);
-		eventManager.ActiveEvent(currentCard.LeftChoice.eventData);
 		eventManager.ApplyActiveEvents();
+		eventManager.ActiveEvent(currentCard.LeftChoice.eventData);
 		nextTurn(isLeftChoice: true);
 	}
 
 	private void OnRightChoiceConfirmedHandler() {
 		if (gamePaused) return;
 		ApplyChoices(currentCard.RightChoice.attributes);
-		eventManager.ActiveEvent(currentCard.RightChoice.eventData);
 		eventManager.ApplyActiveEvents();
+		eventManager.ActiveEvent(currentCard.RightChoice.eventData);
 		nextTurn(isLeftChoice: false);
 	}
 
