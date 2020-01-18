@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card 34
   m_EditorClassIdentifier: 
   Name: 
-  Description: "Me gustar\xEDa hacer una analisis de vuestro proximo juego"
+  Description: "Me gustar\xEDa hacer una analisis de vuestro proximo juego."
   Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
   LeftChoice:
     Text: No

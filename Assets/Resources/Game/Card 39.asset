@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495da070e77e67b45b1f172c10fbabc7, type: 3}
-  m_Name: Card 16
+  m_Name: Card 39
   m_EditorClassIdentifier: 
   Name: 
-  Description: "No te pongas nervioso pero he descubierto un bug de \xFAltima hora
-    que peta el juego."
+  Description: "Es la III Edici\U000EE8E4\xF3n del Vidijuego Aguards y este a\xF1o
+    lo vamos a petar!!"
   Character: {fileID: 11400000, guid: d6013684f27023e4fa1e57e0fe268d77, type: 2}
   LeftChoice:
-    Text: Hagamos una feature
+    Text: Claro que si
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
-      amount: 1
+      amount: 0
     - attribute: 2
       amount: 0
     - attribute: 3
@@ -30,14 +30,14 @@ MonoBehaviour:
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: "Arregladlo r\xE1pido"
+    Text: Eso espero
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
       amount: 0
     - attribute: 2
-      amount: -1
+      amount: 0
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}

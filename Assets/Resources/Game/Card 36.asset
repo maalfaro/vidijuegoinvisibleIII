@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: "Hemos encontrado gente vendiendo claves piratas, \xBFQu\xE9 hacemos?"
   Character: {fileID: 11400000, guid: a7e236027d8b630499247ace03ded9f6, type: 2}
   LeftChoice:
-    Text: Dejar que lo hagan
+    Text: Deja que lo hagan
     attributes:
     - attribute: 0
       amount: -1

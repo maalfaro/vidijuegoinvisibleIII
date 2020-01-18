@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card 9
   m_EditorClassIdentifier: 
   Name: 
-  Description: "Deber\xEDamos hacer un juego de una pelusa"
+  Description: "Deber\xEDamos hacer un juego de una pelusa."
   Character: {fileID: 11400000, guid: 1f520e44224350c49bf2268548d73abb, type: 2}
   LeftChoice:
     Text: "Lo considerar\xE9"

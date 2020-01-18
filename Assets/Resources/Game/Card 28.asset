@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card 28
   m_EditorClassIdentifier: 
   Name: 
-  Description: "\xBFHas oido hablar del crowdfunding? Eso es dinero f\xE1cil amigo"
+  Description: "\xBFHas oido hablar del crowdfunding? Eso es dinero f\xE1cil amigo."
   Character: {fileID: 11400000, guid: 80a5317bab452f44abe472951ab7e4f9, type: 2}
   LeftChoice:
     Text: "No me f\xEDo"

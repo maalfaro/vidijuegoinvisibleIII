@@ -32,6 +32,7 @@ using System;
     private Vector3 mousePosition;
     private Vector3 finalCardPosition;
     private Vector3 initialCardPosition;
+	private int change;
 
     public bool CanMove {
       get {
@@ -142,17 +143,28 @@ using System;
     }
 
     private void SetChoiceInterface() {
-      float finalPosition = cardRectTransform.anchoredPosition.x;
+		float finalPosition = cardRectTransform.anchoredPosition.x;
 		if (finalPosition < -choiceOffset)
 		{
+			if (change != 1)
+			{
+				change = 1;
+				DisableGameplayChoices?.Invoke();
+			}
 			OnLeftChoiceSelected?.Invoke();
 		}
 		else if (finalPosition > choiceOffset)
 		{
+			if (change != 2)
+			{
+				change = 2;
+				DisableGameplayChoices?.Invoke();
+			}
 			OnRightChoiceSelected?.Invoke();
 		}
 		else
 		{
+			change = 0;
 			DisableGameplayChoices?.Invoke();
 		}
 	}

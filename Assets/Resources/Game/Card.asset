@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card
   m_EditorClassIdentifier: 
   Name: 
-  Description: "Creo que ha este proyecto le hacen falta m\xE1s culos"
+  Description: "Creo que ha este proyecto le hacen falta m\xE1s culos."
   Character: {fileID: 11400000, guid: b62d1d40fd9d70b43a1f9b71a4b71aef, type: 2}
   LeftChoice:
     Text: "No necesita m\xE1s"

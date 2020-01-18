@@ -13,32 +13,32 @@ MonoBehaviour:
   m_Name: Card 35
   m_EditorClassIdentifier: 
   Name: 
-  Description: 'He visto '
-  Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
+  Description: "Deber\xEDas usar m\xE1s las RRSS para promocionar tus juegos. "
+  Character: {fileID: 11400000, guid: 80a5317bab452f44abe472951ab7e4f9, type: 2}
   LeftChoice:
-    Text: "Jam\xE1s"
+    Text: No
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
-      amount: 0
-    - attribute: 2
-      amount: 1
-    - attribute: 3
       amount: -1
+    - attribute: 2
+      amount: 0
+    - attribute: 3
+      amount: 0
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: Me parece justo
+    Text: Si
     attributes:
     - attribute: 0
-      amount: 1
-    - attribute: 1
       amount: 0
+    - attribute: 1
+      amount: 1
     - attribute: 2
-      amount: -1
+      amount: 0
     - attribute: 3
-      amount: 2
+      amount: 0
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   weight: 1

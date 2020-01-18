@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Description: "Creo que deber\xEDamos de hacer una reuni\xF3n de producci\xF3n de
-    las nuestras"
+    las nuestras."
   Character: {fileID: 11400000, guid: d6013684f27023e4fa1e57e0fe268d77, type: 2}
   LeftChoice:
     Text: Hoy no puedo

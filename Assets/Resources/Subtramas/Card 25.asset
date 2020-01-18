@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Card 25
   m_EditorClassIdentifier: 
   Name: 
-  Description: "Ya han pasado seis meses y no s\xE9 nada del proyecto."
+  Description: "Ya han pasado seis meses y no s\xE9 nada del proyecto..."
   Character: {fileID: 11400000, guid: 0dea01a7d27998743a1cf04b8ce0afbd, type: 2}
   LeftChoice:
     Text: Te lo mandamos hace 3 meses
     attributes:
     - attribute: 0
-      amount: -1
+      amount: 1
     - attribute: 1
       amount: 0
     - attribute: 2

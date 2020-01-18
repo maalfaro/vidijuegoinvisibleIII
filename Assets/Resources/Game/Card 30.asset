@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Card 30
   m_EditorClassIdentifier: 
   Name: 
-  Description: "\xBFQuieres dar una charla en el pr\xF3ximo evento? Es sencillo, cualquiera
-    puede dar una charla"
+  Description: Necesitamos una persona para dar una charla en el proximo evento.
   Character: {fileID: 11400000, guid: 61970580f23817c44b99a78a480f347c, type: 2}
   LeftChoice:
     Text: No me veo preparado

@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Card 18
   m_EditorClassIdentifier: 
   Name: 
-  Description: 
+  Description: Puedo ver que nos contactas ya que te dio tremendo lagazo y perdiste
+    un cristal.
   Character: {fileID: 11400000, guid: a446f67921d02e742ad4c251d1fea810, type: 2}
   LeftChoice:
-    Text: 
+    Text: "\xBFQu\xE9?"
     attributes:
     - attribute: 0
       amount: 0
@@ -25,11 +26,11 @@ MonoBehaviour:
     - attribute: 2
       amount: 0
     - attribute: 3
-      amount: 0
+      amount: -1
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: Fue muy frustante
     attributes:
     - attribute: 0
       amount: 0
@@ -38,7 +39,7 @@ MonoBehaviour:
     - attribute: 2
       amount: 0
     - attribute: 3
-      amount: 0
+      amount: 1
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   weight: 1

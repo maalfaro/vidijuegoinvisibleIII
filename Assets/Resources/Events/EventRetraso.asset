@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776e4bb1fdeb5fc4bb6378d40f5a2d7d, type: 3}
   m_Name: EventRetraso
   m_EditorClassIdentifier: 
-  Probability: 1
+  Probability: 0.5
   Name: Retraso lanzamiento (-1 <sprite=0>)
   Description: 'NUEVO EVENTO
 

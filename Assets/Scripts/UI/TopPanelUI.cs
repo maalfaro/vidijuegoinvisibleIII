@@ -69,7 +69,7 @@ public class TopPanelUI : MonoBehaviour
 
 	public void SetLeftAttributes()
 	{
-		for(int i = 0; i < cardData.LeftChoice.attributes.Length; i++)
+		for (int i = 0; i < cardData.LeftChoice.attributes.Length; i++)
 		{
 			GlobalData.AttributesEffect at = cardData.LeftChoice.attributes[i];
 			ShowAttributeModifier(at.attribute, at.amount);

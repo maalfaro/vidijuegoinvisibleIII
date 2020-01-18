@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Description: "Podriamos preparar una partida de rol con nuestra comunidad para estar
-    m\xE1s unidos"
+    m\xE1s unidos."
   Character: {fileID: 11400000, guid: 6e53617ce2957364ea2ddcaf901d3c8e, type: 2}
   LeftChoice:
     Text: No

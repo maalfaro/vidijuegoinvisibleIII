@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Card 27
   m_EditorClassIdentifier: 
   Name: 
-  Description: Hemos encontrado gente
+  Description: Creo que este juego es una copia descarada y podriamos tener problemas
+    legales.
   Character: {fileID: 11400000, guid: 0963d7f2048e785448516e411eb4d828, type: 2}
   LeftChoice:
     Text: "\xBFProblemas legales?"
@@ -29,14 +30,14 @@ MonoBehaviour:
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: Por supuesto
+    Text: "Nadie se dar\xE1 cuenta"
     attributes:
     - attribute: 0
-      amount: 1
-    - attribute: 1
       amount: 0
-    - attribute: 2
+    - attribute: 1
       amount: 1
+    - attribute: 2
+      amount: 0
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}

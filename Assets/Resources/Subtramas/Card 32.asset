@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Description: Podemos ofrecerte mucho dinero y publicidad, a cambio tenemos control
-    total del proyecto
+    total del proyecto.
   Character: {fileID: 11400000, guid: a7e236027d8b630499247ace03ded9f6, type: 2}
   LeftChoice:
     Text: "Jam\xE1s"

@@ -13,30 +13,30 @@ MonoBehaviour:
   m_Name: Card 29
   m_EditorClassIdentifier: 
   Name: 
-  Description: Mi juego
+  Description: Queremos montar un sindicato de trabajadores de videojuegos.
   Character: {fileID: 11400000, guid: 61970580f23817c44b99a78a480f347c, type: 2}
   LeftChoice:
-    Text: No me veo preparado
+    Text: No es necesario
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
       amount: 0
     - attribute: 2
-      amount: 0
+      amount: -1
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: Por supuesto
+    Text: Siempre quise montar uno
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
-      amount: 1
-    - attribute: 2
       amount: 0
+    - attribute: 2
+      amount: 1
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}

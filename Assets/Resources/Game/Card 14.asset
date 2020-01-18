@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Card 14
   m_EditorClassIdentifier: 
   Name: 
-  Description: 
+  Description: Tengo una idea para un juego como el Reins??...  Rinch??... Runch??...
   Character: {fileID: 11400000, guid: d6013684f27023e4fa1e57e0fe268d77, type: 2}
   LeftChoice:
-    Text: 
+    Text: Reings?
     attributes:
     - attribute: 0
       amount: 0
@@ -26,10 +26,10 @@ MonoBehaviour:
       amount: 0
     - attribute: 3
       amount: 0
-    nextCard: {fileID: 0}
+    nextCard: {fileID: 11400000, guid: e8d7b8b1dc48d9e4288fb903d00b0daf, type: 2}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: Reings?
     attributes:
     - attribute: 0
       amount: 0
@@ -39,6 +39,6 @@ MonoBehaviour:
       amount: 0
     - attribute: 3
       amount: 0
-    nextCard: {fileID: 0}
+    nextCard: {fileID: 11400000, guid: e8d7b8b1dc48d9e4288fb903d00b0daf, type: 2}
     eventData: {fileID: 0}
   weight: 1

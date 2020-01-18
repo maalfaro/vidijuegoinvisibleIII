@@ -13,31 +13,32 @@ MonoBehaviour:
   m_Name: Card 7
   m_EditorClassIdentifier: 
   Name: 
-  Description: 'Resulta que los "Ulys" son unos farsantes '
+  Description: "Seg\xFAn los \xFAltimos datos, solo un 16% de los desarrolladores
+    de videojuegos son mujeres."
   Character: {fileID: 11400000, guid: 6e53617ce2957364ea2ddcaf901d3c8e, type: 2}
   LeftChoice:
-    Text: 
+    Text: Es normal...
     attributes:
     - attribute: 0
       amount: 0
-    - attribute: 0
+    - attribute: 1
       amount: 0
-    - attribute: 0
-      amount: 0
-    - attribute: 0
+    - attribute: 2
+      amount: -1
+    - attribute: 3
       amount: 0
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: "\xA1Esto no puede ser!"
     attributes:
     - attribute: 0
       amount: 0
-    - attribute: 0
-      amount: 0
-    - attribute: 0
-      amount: 0
-    - attribute: 0
+    - attribute: 1
+      amount: 1
+    - attribute: 2
+      amount: 1
+    - attribute: 3
       amount: 0
     nextCard: {fileID: 0}
     eventData: {fileID: 0}

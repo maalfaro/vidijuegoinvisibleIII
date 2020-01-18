@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Card 22
   m_EditorClassIdentifier: 
   Name: 
-  Description: Guau, guau
+  Description: Guau, guau.
   Character: {fileID: 11400000, guid: c8aebaab27f7d26418723a6781091dbe, type: 2}
   LeftChoice:
     Text: Ahora no puedo...
