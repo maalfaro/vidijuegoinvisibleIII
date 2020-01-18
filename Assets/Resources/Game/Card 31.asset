@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495da070e77e67b45b1f172c10fbabc7, type: 3}
+  m_Name: Card 31
+  m_EditorClassIdentifier: 
+  Name: 
+  Description: Estoy muy interesado en invertir en tu juego
+  Character: {fileID: 11400000, guid: a7e236027d8b630499247ace03ded9f6, type: 2}
+  LeftChoice:
+    Text: No me interesa
+    attributes:
+    - attribute: 0
+      amount: 0
+    - attribute: 1
+      amount: 0
+    - attribute: 2
+      amount: 0
+    - attribute: 3
+      amount: -1
+    nextCard: {fileID: 0}
+    eventData: {fileID: 0}
+  RightChoice:
+    Text: "Cuentame m\xE1s"
+    attributes:
+    - attribute: 0
+      amount: 0
+    - attribute: 1
+      amount: 0
+    - attribute: 2
+      amount: 0
+    - attribute: 3
+      amount: 0
+    nextCard: {fileID: 11400000, guid: d1052cf140cb3204ca7ad446da45690c, type: 2}
+    eventData: {fileID: 0}
+  weight: 1

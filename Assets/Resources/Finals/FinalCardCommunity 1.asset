@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: FinalCardCommunity 1
   m_EditorClassIdentifier: 
   Name: FinalCommunity
-  Description: FINAL COMMUNITY 1
-  Character: {fileID: 11400000, guid: b62d1d40fd9d70b43a1f9b71a4b71aef, type: 2}
+  Description: "El gran hype creado por el juego no ha podido cumplir las expectativas
+    de la gente y las cr\xEDticas se ceban con el juego."
+  Character: {fileID: 11400000, guid: 1c36507c15becda4bbaa2bb5a18e5104, type: 2}
   LeftChoice:
     Text: 
     attributes: []

@@ -13,30 +13,30 @@ MonoBehaviour:
   m_Name: Card
   m_EditorClassIdentifier: 
   Name: 
-  Description: 
+  Description: "Creo que ha este proyecto le hacen falta m\xE1s culos"
   Character: {fileID: 11400000, guid: b62d1d40fd9d70b43a1f9b71a4b71aef, type: 2}
   LeftChoice:
-    Text: 
+    Text: "No necesita m\xE1s"
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
-      amount: 0
+      amount: -2
     - attribute: 2
-      amount: 0
+      amount: -1
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: "Pon m\xE1s culos"
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
-      amount: 0
+      amount: 2
     - attribute: 2
-      amount: 0
+      amount: 1
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}

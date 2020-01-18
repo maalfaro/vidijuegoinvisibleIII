@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Card 9
   m_EditorClassIdentifier: 
   Name: 
-  Description: 
-  Character: {fileID: 11400000, guid: a05c242f5e479854d898f51fe99d4680, type: 2}
+  Description: "Deber\xEDamos hacer un juego de una pelusa"
+  Character: {fileID: 11400000, guid: 1f520e44224350c49bf2268548d73abb, type: 2}
   LeftChoice:
-    Text: 
+    Text: "Lo considerar\xE9"
     attributes:
     - attribute: 0
-      amount: 0
+      amount: -1
     - attribute: 1
-      amount: 0
+      amount: -1
     - attribute: 2
       amount: 0
     - attribute: 3
@@ -29,12 +29,12 @@ MonoBehaviour:
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: De acuerdo
     attributes:
     - attribute: 0
-      amount: 0
+      amount: 1
     - attribute: 1
-      amount: 0
+      amount: 1
     - attribute: 2
       amount: 0
     - attribute: 3

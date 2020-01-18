@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: FinalCardTeam 1
   m_EditorClassIdentifier: 
   Name: FinalCommunity
-  Description: FINAL TEAM
-  Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
+  Description: Debido al gran trabajo del equipo han terminado todo antes de tiempo
+    y nos hemos quedado sin proyectos que desarrollar.
+  Character: {fileID: 11400000, guid: 1c36507c15becda4bbaa2bb5a18e5104, type: 2}
   LeftChoice:
     Text: 
     attributes: []

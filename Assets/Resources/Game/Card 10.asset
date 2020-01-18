@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Card 10
   m_EditorClassIdentifier: 
   Name: 
-  Description: 
-  Character: {fileID: 11400000, guid: 80a5317bab452f44abe472951ab7e4f9, type: 2}
+  Description: Slrrrpppp
+  Character: {fileID: 11400000, guid: 1f520e44224350c49bf2268548d73abb, type: 2}
   LeftChoice:
-    Text: 
+    Text: Slrrrpppp??
     attributes:
     - attribute: 0
       amount: 0
@@ -26,10 +26,10 @@ MonoBehaviour:
       amount: 0
     - attribute: 3
       amount: 0
-    nextCard: {fileID: 0}
+    nextCard: {fileID: 11400000, guid: e1d66a581ad416b44a1675b18a2e7191, type: 2}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: Slrrrpppp??
     attributes:
     - attribute: 0
       amount: 0
@@ -39,6 +39,6 @@ MonoBehaviour:
       amount: 0
     - attribute: 3
       amount: 0
-    nextCard: {fileID: 0}
+    nextCard: {fileID: 11400000, guid: e1d66a581ad416b44a1675b18a2e7191, type: 2}
     eventData: {fileID: 0}
   weight: 1

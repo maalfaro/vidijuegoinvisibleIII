@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Card 6
   m_EditorClassIdentifier: 
   Name: 
-  Description: 
-  Character: {fileID: 11400000, guid: 1f520e44224350c49bf2268548d73abb, type: 2}
+  Description: "\xBFTe has enterado del \xFAltimo salseo?"
+  Character: {fileID: 11400000, guid: 6e53617ce2957364ea2ddcaf901d3c8e, type: 2}
   LeftChoice:
-    Text: 
+    Text: No me interesa
     attributes:
     - attribute: 0
-      amount: 0
+      amount: -1
     - attribute: 1
-      amount: 0
+      amount: -1
     - attribute: 2
       amount: 0
     - attribute: 3
@@ -29,7 +29,7 @@ MonoBehaviour:
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: "Cu\xE9ntame"
     attributes:
     - attribute: 0
       amount: 0
@@ -39,6 +39,6 @@ MonoBehaviour:
       amount: 0
     - attribute: 3
       amount: 0
-    nextCard: {fileID: 0}
+    nextCard: {fileID: 11400000, guid: 8ad171d861d4daa438314a65e318e6cc, type: 2}
     eventData: {fileID: 0}
   weight: 1

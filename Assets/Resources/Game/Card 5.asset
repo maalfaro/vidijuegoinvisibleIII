@@ -13,30 +13,31 @@ MonoBehaviour:
   m_Name: Card 5
   m_EditorClassIdentifier: 
   Name: 
-  Description: 
-  Character: {fileID: 11400000, guid: 6e53617ce2957364ea2ddcaf901d3c8e, type: 2}
+  Description: "Creo que me tomar\xE9 todo este yogurt ahora mismo \xBFQue podr\xEDa
+    salir mal?"
+  Character: {fileID: 11400000, guid: b32bbf3050db705469ff607d0b5815ce, type: 2}
   LeftChoice:
-    Text: 
+    Text: No lo hagas
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
       amount: 0
     - attribute: 2
-      amount: 0
+      amount: 1
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: No creo que sea bueno
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
       amount: 0
     - attribute: 2
-      amount: 0
+      amount: -1
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}

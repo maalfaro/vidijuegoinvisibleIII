@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: EventRetraso
   m_EditorClassIdentifier: 
   Probability: 1
-  Description: 
+  Name: Retraso lanzamiento (-1 <sprite=0>)
+  Description: 'NUEVO EVENTO
+
+
+    Retraso en el lanzamiento del proyecto
+
+    -1 <sprite=0 color=#000000FF>'
   Duration: 3
   AttributesEffect:
   - attribute: 0

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FinalCardTeam
   m_EditorClassIdentifier: 
   Name: FinalCommunity
-  Description: FINAL TEAM 0
-  Character: {fileID: 11400000, guid: fd451f3dfc2d13a4da6cc68cfd63ead7, type: 2}
+  Description: "Nadie quiere trabajar para t\xED, cierras el estudio."
+  Character: {fileID: 11400000, guid: 1c36507c15becda4bbaa2bb5a18e5104, type: 2}
   LeftChoice:
     Text: 
     attributes: []

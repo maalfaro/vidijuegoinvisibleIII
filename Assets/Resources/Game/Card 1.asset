@@ -13,32 +13,32 @@ MonoBehaviour:
   m_Name: Card 1
   m_EditorClassIdentifier: 
   Name: 
-  Description: 
-  Character: {fileID: 11400000, guid: c78f12b90a5c08b42a873528afd17794, type: 2}
+  Description: "Pues men. estaba echando unos fifas y se me pas\xF3 hacer el juego..."
+  Character: {fileID: 11400000, guid: b62d1d40fd9d70b43a1f9b71a4b71aef, type: 2}
   LeftChoice:
-    Text: 
+    Text: Es inaceptable
     attributes:
     - attribute: 0
-      amount: 0
+      amount: -1
     - attribute: 1
       amount: 0
     - attribute: 2
-      amount: 0
+      amount: -1
     - attribute: 3
-      amount: 0
+      amount: -1
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: "Al menos ganar\xEDas"
     attributes:
     - attribute: 0
-      amount: 0
+      amount: -1
     - attribute: 1
       amount: 0
     - attribute: 2
-      amount: 0
+      amount: 1
     - attribute: 3
-      amount: 0
+      amount: -2
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   weight: 1

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Deivid
   m_EditorClassIdentifier: 
   Name: Deivid
-  Description: Maestro pokemon
+  Description: 
   Sprite: {fileID: 21300000, guid: a4221be46e892d1449f343bd6c86076d, type: 3}
   background: {r: 0.7725491, g: 0.43529415, b: 0.10196079, a: 1}

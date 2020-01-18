@@ -8,7 +8,13 @@ public class EventManager : Singleton<EventManager>
 	public static System.Action<List<EventData>, bool> OnEventChanged;
 	private List<EventData> activeEvents;
 
-	private void Start()
+	protected override void Awake()
+	{
+		base.Awake();
+		GameManager.OnGameStart += OnGameStart;
+	}
+
+	private void OnGameStart()
 	{
 		activeEvents = new List<EventData>();
 	}

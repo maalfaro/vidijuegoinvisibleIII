@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776e4bb1fdeb5fc4bb6378d40f5a2d7d, type: 3}
   m_Name: EventKickstarter
   m_EditorClassIdentifier: 
-  Probability: 1
-  Description: 
+  Probability: 0.404
+  Name: Crowdfunding comenzado (1 <sprite=3>)
+  Description: 'NUEVO EVENTO
+
+
+    Has comenzado un crowdfunding
+
+    1 <sprite=3 color=#000000FF>'
   Duration: 3
   AttributesEffect:
-  - attribute: 0
-    amount: -1
+  - attribute: 3
+    amount: 1

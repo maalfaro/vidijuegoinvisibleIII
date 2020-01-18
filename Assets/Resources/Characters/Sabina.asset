@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Sabina
   m_EditorClassIdentifier: 
   Name: Sabina
-  Description: La abogada
+  Description: 
   Sprite: {fileID: 21300000, guid: 27aeaa8c07f9e594db5e0ac26d2ed135, type: 3}
   background: {r: 0.97647065, g: 0.627451, b: 0.33333334, a: 1}

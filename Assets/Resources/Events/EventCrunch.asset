@@ -13,9 +13,14 @@ MonoBehaviour:
   m_Name: EventCrunch
   m_EditorClassIdentifier: 
   Probability: 1
-  Name: Crunch state (-1 <sprite=2>)
-  Description: "NUEVO EVENTO\n\nEvento de crunch activado \n-1 <sprite=2 color=#000000FF>"
+  Name: Evento Crunch (-1 <sprite=2>)
+  Description: 'NUEVO EVENTO
+
+
+    Crunch!! Crunch!! Crunch!!
+
+    -1 <sprite=2 color=#000000FF>'
   Duration: 3
   AttributesEffect:
-  - attribute: 0
+  - attribute: 2
     amount: -1

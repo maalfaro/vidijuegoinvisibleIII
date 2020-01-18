@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Card 3
   m_EditorClassIdentifier: 
   Name: 
-  Description: 
-  Character: {fileID: 11400000, guid: b32bbf3050db705469ff607d0b5815ce, type: 2}
+  Description: El viernes tengo concierto con el coro y lo necesito libre para ensayar.
+  Character: {fileID: 11400000, guid: c78f12b90a5c08b42a873528afd17794, type: 2}
   LeftChoice:
-    Text: 
+    Text: No
     attributes:
     - attribute: 0
       amount: 0
@@ -25,20 +25,20 @@ MonoBehaviour:
     - attribute: 2
       amount: 0
     - attribute: 3
-      amount: 0
+      amount: 1
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: Si
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
       amount: 0
     - attribute: 2
-      amount: 0
+      amount: 1
     - attribute: 3
-      amount: 0
+      amount: -1
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   weight: 1

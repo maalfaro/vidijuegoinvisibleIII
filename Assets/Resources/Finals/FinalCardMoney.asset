@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FinalCardMoney
   m_EditorClassIdentifier: 
   Name: FinalCommunity
-  Description: FINAL MONEY 0
-  Character: {fileID: 11400000, guid: c8aebaab27f7d26418723a6781091dbe, type: 2}
+  Description: Nos hemos queadad sin dinero.
+  Character: {fileID: 11400000, guid: 1c36507c15becda4bbaa2bb5a18e5104, type: 2}
   LeftChoice:
     Text: 
     attributes: []

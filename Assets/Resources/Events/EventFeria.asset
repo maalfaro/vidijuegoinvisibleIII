@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: EventFeria
   m_EditorClassIdentifier: 
   Probability: 1
-  Description: 
+  Name: Asistencia a feria (1 <sprite=1>)
+  Description: 'NUEVO EVENTO
+
+
+    Asistes a la proxima feria
+
+    1 <sprite=1 color=#000000FF>'
   Duration: 3
   AttributesEffect:
-  - attribute: 0
-    amount: -1
+  - attribute: 1
+    amount: 1

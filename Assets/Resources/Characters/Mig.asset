@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Mig
   m_EditorClassIdentifier: 
   Name: Mig
-  Description: "El \xC1ngel"
+  Description: 
   Sprite: {fileID: 21300000, guid: 9c9156c3cdd1ec64c806ca7f569199c5, type: 3}
   background: {r: 0.24136703, g: 0.38424748, b: 0.4528302, a: 1}

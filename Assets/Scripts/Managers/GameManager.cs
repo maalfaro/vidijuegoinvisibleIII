@@ -13,7 +13,7 @@ public class GameManager : Singleton<GameManager>
 	public static Action<bool> OnGameOver;
 	public static Action<bool> OnGamePaused;
 
-	private List<CardData> cards;
+	[SerializeField] private List<CardData> cards;
 	private List<FinalCardData> finalCards;
 	[SerializeField] private CardData initialCard;
 

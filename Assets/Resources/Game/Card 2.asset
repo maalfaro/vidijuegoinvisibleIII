@@ -13,30 +13,30 @@ MonoBehaviour:
   m_Name: Card 2
   m_EditorClassIdentifier: 
   Name: 
-  Description: 
-  Character: {fileID: 11400000, guid: 973c55ecfa2889d46824a11777a3d01c, type: 2}
+  Description: "He visto que hay una incursi\xF3n cerca de aqu\xED, \xBFVamos?"
+  Character: {fileID: 11400000, guid: c78f12b90a5c08b42a873528afd17794, type: 2}
   LeftChoice:
-    Text: 
+    Text: Hace tiempo que no juego
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
       amount: 0
     - attribute: 2
-      amount: 0
+      amount: -1
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: Por supuesto
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
       amount: 0
     - attribute: 2
-      amount: 0
+      amount: 1
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}

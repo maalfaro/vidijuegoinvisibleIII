@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 
   Description: 
-  Character: {fileID: 11400000, guid: 1c36507c15becda4bbaa2bb5a18e5104, type: 2}
+  Character: {fileID: 11400000, guid: d6013684f27023e4fa1e57e0fe268d77, type: 2}
   LeftChoice:
     Text: 
     attributes:

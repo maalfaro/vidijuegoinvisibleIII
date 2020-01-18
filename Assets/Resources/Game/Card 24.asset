@@ -10,35 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495da070e77e67b45b1f172c10fbabc7, type: 3}
-  m_Name: Card 11
+  m_Name: Card 24
   m_EditorClassIdentifier: 
   Name: 
-  Description: 
-  Character: {fileID: 11400000, guid: 61970580f23817c44b99a78a480f347c, type: 2}
+  Description: "\xBFC\xF3mo va el proyecto? Lo necesito para esta semana."
+  Character: {fileID: 11400000, guid: 0dea01a7d27998743a1cf04b8ce0afbd, type: 2}
   LeftChoice:
-    Text: 
+    Text: Eso es una locura
     attributes:
     - attribute: 0
-      amount: 0
+      amount: -2
     - attribute: 1
-      amount: 0
+      amount: -1
     - attribute: 2
       amount: 0
     - attribute: 3
       amount: 0
-    nextCard: {fileID: 0}
+    nextCard: {fileID: 11400000, guid: 592da769e6714e54498b65b5a74a9349, type: 2}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: Haremos crunch
     attributes:
     - attribute: 0
-      amount: 0
+      amount: 1
     - attribute: 1
-      amount: 0
+      amount: -1
     - attribute: 2
-      amount: 0
+      amount: -2
     - attribute: 3
       amount: 0
-    nextCard: {fileID: 0}
-    eventData: {fileID: 0}
+    nextCard: {fileID: 11400000, guid: 592da769e6714e54498b65b5a74a9349, type: 2}
+    eventData: {fileID: 11400000, guid: 5e647505d17be9e41b69632262dea292, type: 2}
   weight: 1

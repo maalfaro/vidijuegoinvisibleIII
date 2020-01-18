@@ -13,30 +13,31 @@ MonoBehaviour:
   m_Name: Card 17
   m_EditorClassIdentifier: 
   Name: 
-  Description: 
-  Character: {fileID: 11400000, guid: 0dea01a7d27998743a1cf04b8ce0afbd, type: 2}
+  Description: "\xBFNecesitas un programador-dise\xF1ador-artista-m\xFAsico-amantedelfuetydelgazpachito?
+    Soy tu hombre!!"
+  Character: {fileID: 11400000, guid: a446f67921d02e742ad4c251d1fea810, type: 2}
   LeftChoice:
-    Text: 
+    Text: Nah, paso
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
       amount: 0
     - attribute: 2
-      amount: 0
+      amount: -1
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}
     eventData: {fileID: 0}
   RightChoice:
-    Text: 
+    Text: Eres mi hombre!!
     attributes:
     - attribute: 0
       amount: 0
     - attribute: 1
       amount: 0
     - attribute: 2
-      amount: 0
+      amount: 1
     - attribute: 3
       amount: 0
     nextCard: {fileID: 0}

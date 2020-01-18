@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: FinalCardMoney 1
   m_EditorClassIdentifier: 
   Name: FinalCommunity
-  Description: FINAL MONEY
-  Character: {fileID: 11400000, guid: c8aebaab27f7d26418723a6781091dbe, type: 2}
+  Description: Has ganado una inmensa cantidad de dinero y decides retirarte a tu
+    isla privada a disfrutar del resto de tus dias.
+  Character: {fileID: 11400000, guid: 1c36507c15becda4bbaa2bb5a18e5104, type: 2}
   LeftChoice:
     Text: 
     attributes: []
